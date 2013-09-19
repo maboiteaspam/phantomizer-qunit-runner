@@ -1,0 +1,21 @@
+{
+  "name": "phantomizer-qunit-runner",
+  "version": "0.1.0",
+    "private": true,
+    "description": "Qunit testing support for phantomizer",
+    "keywords": "",
+    "bugs": {
+        "url" : "http://github.com/maboiteaspam/phantomizer-qunit-runner/issues",
+        "email" : "none@host.com"
+    },
+    "license" : "mit",
+    "repository" :{
+        "type" : "git",
+        "url" : "http://github.com/maboiteaspam/phantomizer-qunit-runner.git"
+    },
+  "dependencies": {
+      "grunt": "0.4.x",
+      "grunt-contrib-qunit": "0.2.x"
+      ,"phantomizer": "maboiteaspam/phantomizer"
+  }
+}

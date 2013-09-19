@@ -1,0 +1,2063 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/clement/bin/node',
+1 verbose cli   '/home/clement/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '.',
+1 verbose cli   '-g' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.16
+4 verbose node symlink /home/clement/bin/node
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /home/clement/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+12 verbose folder .
+13 silly lockFile 1f1177db-tar tar://.
+14 verbose lock tar://. /home/clement/.npm/1f1177db-tar.lock
+15 silly lockFile 7ea8a1c3-02053-0-6369423335418105-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+16 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz /home/clement/.npm/7ea8a1c3-02053-0-6369423335418105-tmp-tgz.lock
+17 silly lockFile 1f1177db-tar tar://.
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 7ea8a1c3-02053-0-6369423335418105-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+20 silly lockFile 7ea8a1c3-02053-0-6369423335418105-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+21 verbose tar unpack /home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+22 silly lockFile a56c3e47-02053-0-6369423335418105-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package
+23 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package /home/clement/.npm/a56c3e47-02053-0-6369423335418105-package.lock
+24 silly lockFile 7ea8a1c3-02053-0-6369423335418105-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+25 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz /home/clement/.npm/7ea8a1c3-02053-0-6369423335418105-tmp-tgz.lock
+26 silly gunzTarPerm modes [ '755', '644' ]
+27 silly gunzTarPerm extractEntry package.json
+28 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+31 silly gunzTarPerm extractEntry README.md
+32 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+33 silly gunzTarPerm extractEntry .idea/.name
+34 silly gunzTarPerm modified mode [ '.idea/.name', 436, 420 ]
+35 silly gunzTarPerm extractEntry .idea/encodings.xml
+36 silly gunzTarPerm modified mode [ '.idea/encodings.xml', 436, 420 ]
+37 silly gunzTarPerm extractEntry .idea/misc.xml
+38 silly gunzTarPerm modified mode [ '.idea/misc.xml', 436, 420 ]
+39 silly gunzTarPerm extractEntry .idea/modules.xml
+40 silly gunzTarPerm modified mode [ '.idea/modules.xml', 436, 420 ]
+41 silly gunzTarPerm extractEntry .idea/phantomizer-qunit-runner.iml
+42 silly gunzTarPerm modified mode [ '.idea/phantomizer-qunit-runner.iml', 436, 420 ]
+43 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+44 silly gunzTarPerm modified mode [ '.idea/scopes/scope_settings.xml', 436, 420 ]
+45 silly gunzTarPerm extractEntry .idea/vcs.xml
+46 silly gunzTarPerm modified mode [ '.idea/vcs.xml', 436, 420 ]
+47 silly gunzTarPerm extractEntry .idea/workspace.xml
+48 silly gunzTarPerm modified mode [ '.idea/workspace.xml', 436, 420 ]
+49 silly gunzTarPerm extractEntry AUTHORS
+50 silly gunzTarPerm modified mode [ 'AUTHORS', 436, 420 ]
+51 silly gunzTarPerm extractEntry tasks/build.js
+52 silly gunzTarPerm modified mode [ 'tasks/build.js', 436, 420 ]
+53 silly lockFile a56c3e47-02053-0-6369423335418105-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package
+54 silly lockFile a56c3e47-02053-0-6369423335418105-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package
+55 silly lockFile 7ea8a1c3-02053-0-6369423335418105-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+56 silly lockFile 7ea8a1c3-02053-0-6369423335418105-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/tmp.tgz
+57 verbose tar pack [ '/home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz',
+57 verbose tar pack   '/home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package' ]
+58 verbose tarball /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+59 verbose folder /home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package
+60 silly lockFile a56c3e47-02053-0-6369423335418105-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package
+61 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package /home/clement/.npm/a56c3e47-02053-0-6369423335418105-package.lock
+62 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+63 verbose lock tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz /home/clement/.npm/4598d690-r-qunit-runner-0-1-0-package-tgz.lock
+64 silly lockFile a56c3e47-02053-0-6369423335418105-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package
+65 silly lockFile a56c3e47-02053-0-6369423335418105-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576102053-0.6369423335418105/package
+66 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+67 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+68 silly lockFile 8d4f2bdd-mizer-qunit-runner-0-1-0-package /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package
+69 verbose lock /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package /home/clement/.npm/8d4f2bdd-mizer-qunit-runner-0-1-0-package.lock
+70 silly lockFile 8d4f2bdd-mizer-qunit-runner-0-1-0-package /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package
+71 silly lockFile 8d4f2bdd-mizer-qunit-runner-0-1-0-package /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package
+72 verbose tar unpack /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+73 silly lockFile ba6a5bc0-mizer-qunit-runner-0-1-0-package tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package
+74 verbose lock tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package /home/clement/.npm/ba6a5bc0-mizer-qunit-runner-0-1-0-package.lock
+75 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+76 verbose lock tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz /home/clement/.npm/4598d690-r-qunit-runner-0-1-0-package-tgz.lock
+77 silly gunzTarPerm modes [ '755', '644' ]
+78 silly gunzTarPerm extractEntry package.json
+79 silly gunzTarPerm extractEntry .npmignore
+80 silly gunzTarPerm extractEntry README.md
+81 silly gunzTarPerm extractEntry .idea/.name
+82 silly gunzTarPerm extractEntry .idea/encodings.xml
+83 silly gunzTarPerm extractEntry .idea/misc.xml
+84 silly gunzTarPerm extractEntry .idea/modules.xml
+85 silly gunzTarPerm extractEntry .idea/phantomizer-qunit-runner.iml
+86 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+87 silly gunzTarPerm extractEntry .idea/vcs.xml
+88 silly gunzTarPerm extractEntry .idea/workspace.xml
+89 silly gunzTarPerm extractEntry AUTHORS
+90 silly gunzTarPerm extractEntry tasks/build.js
+91 silly lockFile ba6a5bc0-mizer-qunit-runner-0-1-0-package tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package
+92 silly lockFile ba6a5bc0-mizer-qunit-runner-0-1-0-package tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package
+93 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+94 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+95 verbose chmod /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz 644
+96 verbose chown /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz [ 1000, 1000 ]
+97 silly lockFile 3a52ce78- .
+98 silly lockFile 3a52ce78- .
+99 silly resolved [ { name: 'phantomizer-qunit-runner',
+99 silly resolved     version: '0.1.0',
+99 silly resolved     private: true,
+99 silly resolved     description: 'Qunit testing support for phantomizer',
+99 silly resolved     keywords: [],
+99 silly resolved     bugs:
+99 silly resolved      { url: 'http://github.com/maboiteaspam/phantomizer-qunit-runner/issues',
+99 silly resolved        email: 'none@host.com' },
+99 silly resolved     license: 'mit',
+99 silly resolved     repository:
+99 silly resolved      { type: 'git',
+99 silly resolved        url: 'http://github.com/maboiteaspam/phantomizer-qunit-runner.git' },
+99 silly resolved     dependencies:
+99 silly resolved      { grunt: '0.4.x',
+99 silly resolved        'grunt-contrib-qunit': '0.2.x',
+99 silly resolved        phantomizer: 'maboiteaspam/phantomizer' },
+99 silly resolved     contributors: [ [Object] ],
+99 silly resolved     readme: 'README\nlater\n',
+99 silly resolved     readmeFilename: 'README.md',
+99 silly resolved     _id: 'phantomizer-qunit-runner@0.1.0',
+99 silly resolved     dist: { shasum: 'e54b5df3100cebd9421ac5de74e8c4b888b7c6ae' },
+99 silly resolved     _from: '.' } ]
+100 info install phantomizer-qunit-runner@0.1.0 into /home/clement/lib
+101 info installOne phantomizer-qunit-runner@0.1.0
+102 info /home/clement/lib/node_modules/phantomizer-qunit-runner unbuild
+103 verbose tar unpack /home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+104 silly lockFile aa46ddc5-modules-phantomizer-qunit-runner tar:///home/clement/lib/node_modules/phantomizer-qunit-runner
+105 verbose lock tar:///home/clement/lib/node_modules/phantomizer-qunit-runner /home/clement/.npm/aa46ddc5-modules-phantomizer-qunit-runner.lock
+106 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+107 verbose lock tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz /home/clement/.npm/4598d690-r-qunit-runner-0-1-0-package-tgz.lock
+108 silly gunzTarPerm modes [ '755', '644' ]
+109 silly gunzTarPerm extractEntry package.json
+110 silly gunzTarPerm extractEntry .npmignore
+111 silly gunzTarPerm extractEntry README.md
+112 silly gunzTarPerm extractEntry .idea/.name
+113 silly gunzTarPerm extractEntry .idea/encodings.xml
+114 silly gunzTarPerm extractEntry .idea/misc.xml
+115 silly gunzTarPerm extractEntry .idea/modules.xml
+116 silly gunzTarPerm extractEntry .idea/phantomizer-qunit-runner.iml
+117 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+118 silly gunzTarPerm extractEntry .idea/vcs.xml
+119 silly gunzTarPerm extractEntry .idea/workspace.xml
+120 silly gunzTarPerm extractEntry AUTHORS
+121 silly gunzTarPerm extractEntry tasks/build.js
+122 silly lockFile aa46ddc5-modules-phantomizer-qunit-runner tar:///home/clement/lib/node_modules/phantomizer-qunit-runner
+123 silly lockFile aa46ddc5-modules-phantomizer-qunit-runner tar:///home/clement/lib/node_modules/phantomizer-qunit-runner
+124 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+125 silly lockFile 4598d690-r-qunit-runner-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer-qunit-runner/0.1.0/package.tgz
+126 info preinstall phantomizer-qunit-runner@0.1.0
+127 verbose readDependencies using package.json deps
+128 verbose readDependencies using package.json deps
+129 verbose cache add [ 'grunt-contrib-qunit@0.2.x', null ]
+130 verbose cache add name=undefined spec="grunt-contrib-qunit@0.2.x" args=["grunt-contrib-qunit@0.2.x",null]
+131 verbose parsed url { protocol: null,
+131 verbose parsed url   slashes: null,
+131 verbose parsed url   auth: null,
+131 verbose parsed url   host: null,
+131 verbose parsed url   port: null,
+131 verbose parsed url   hostname: null,
+131 verbose parsed url   hash: null,
+131 verbose parsed url   search: null,
+131 verbose parsed url   query: null,
+131 verbose parsed url   pathname: 'grunt-contrib-qunit@0.2.x',
+131 verbose parsed url   path: 'grunt-contrib-qunit@0.2.x',
+131 verbose parsed url   href: 'grunt-contrib-qunit@0.2.x' }
+132 verbose cache add name="grunt-contrib-qunit" spec="0.2.x" args=["grunt-contrib-qunit","0.2.x"]
+133 verbose parsed url { protocol: null,
+133 verbose parsed url   slashes: null,
+133 verbose parsed url   auth: null,
+133 verbose parsed url   host: null,
+133 verbose parsed url   port: null,
+133 verbose parsed url   hostname: null,
+133 verbose parsed url   hash: null,
+133 verbose parsed url   search: null,
+133 verbose parsed url   query: null,
+133 verbose parsed url   pathname: '0.2.x',
+133 verbose parsed url   path: '0.2.x',
+133 verbose parsed url   href: '0.2.x' }
+134 verbose addNamed [ 'grunt-contrib-qunit', '0.2.x' ]
+135 verbose addNamed [ null, '>=0.2.0-0 <0.3.0-0' ]
+136 silly lockFile 6410ee08-grunt-contrib-qunit-0-2-x grunt-contrib-qunit@0.2.x
+137 verbose lock grunt-contrib-qunit@0.2.x /home/clement/.npm/6410ee08-grunt-contrib-qunit-0-2-x.lock
+138 verbose cache add [ 'phantomizer@maboiteaspam/phantomizer', null ]
+139 verbose cache add name=undefined spec="phantomizer@maboiteaspam/phantomizer" args=["phantomizer@maboiteaspam/phantomizer",null]
+140 verbose parsed url { protocol: null,
+140 verbose parsed url   slashes: null,
+140 verbose parsed url   auth: null,
+140 verbose parsed url   host: null,
+140 verbose parsed url   port: null,
+140 verbose parsed url   hostname: null,
+140 verbose parsed url   hash: null,
+140 verbose parsed url   search: null,
+140 verbose parsed url   query: null,
+140 verbose parsed url   pathname: 'phantomizer@maboiteaspam/phantomizer',
+140 verbose parsed url   path: 'phantomizer@maboiteaspam/phantomizer',
+140 verbose parsed url   href: 'phantomizer@maboiteaspam/phantomizer' }
+141 verbose cache add name="phantomizer" spec="maboiteaspam/phantomizer" args=["phantomizer","maboiteaspam/phantomizer"]
+142 verbose parsed url { protocol: null,
+142 verbose parsed url   slashes: null,
+142 verbose parsed url   auth: null,
+142 verbose parsed url   host: null,
+142 verbose parsed url   port: null,
+142 verbose parsed url   hostname: null,
+142 verbose parsed url   hash: null,
+142 verbose parsed url   search: null,
+142 verbose parsed url   query: null,
+142 verbose parsed url   pathname: 'maboiteaspam/phantomizer',
+142 verbose parsed url   path: 'maboiteaspam/phantomizer',
+142 verbose parsed url   href: 'maboiteaspam/phantomizer' }
+143 verbose addNamed [ 'phantomizer', 'maboiteaspam/phantomizer' ]
+144 verbose addNamed [ null, null ]
+145 silly lockFile 7496f970-tomizer-maboiteaspam-phantomizer phantomizer@maboiteaspam/phantomizer
+146 verbose lock phantomizer@maboiteaspam/phantomizer /home/clement/.npm/7496f970-tomizer-maboiteaspam-phantomizer.lock
+147 verbose cache add [ 'grunt@0.4.x', null ]
+148 verbose cache add name=undefined spec="grunt@0.4.x" args=["grunt@0.4.x",null]
+149 verbose parsed url { protocol: null,
+149 verbose parsed url   slashes: null,
+149 verbose parsed url   auth: null,
+149 verbose parsed url   host: null,
+149 verbose parsed url   port: null,
+149 verbose parsed url   hostname: null,
+149 verbose parsed url   hash: null,
+149 verbose parsed url   search: null,
+149 verbose parsed url   query: null,
+149 verbose parsed url   pathname: 'grunt@0.4.x',
+149 verbose parsed url   path: 'grunt@0.4.x',
+149 verbose parsed url   href: 'grunt@0.4.x' }
+150 verbose cache add name="grunt" spec="0.4.x" args=["grunt","0.4.x"]
+151 verbose parsed url { protocol: null,
+151 verbose parsed url   slashes: null,
+151 verbose parsed url   auth: null,
+151 verbose parsed url   host: null,
+151 verbose parsed url   port: null,
+151 verbose parsed url   hostname: null,
+151 verbose parsed url   hash: null,
+151 verbose parsed url   search: null,
+151 verbose parsed url   query: null,
+151 verbose parsed url   pathname: '0.4.x',
+151 verbose parsed url   path: '0.4.x',
+151 verbose parsed url   href: '0.4.x' }
+152 verbose addNamed [ 'grunt', '0.4.x' ]
+153 verbose addNamed [ null, '>=0.4.0-0 <0.5.0-0' ]
+154 silly lockFile 6aebe2f8-grunt-0-4-x grunt@0.4.x
+155 verbose lock grunt@0.4.x /home/clement/.npm/6aebe2f8-grunt-0-4-x.lock
+156 silly addNameRange { name: 'grunt-contrib-qunit',
+156 silly addNameRange   range: '>=0.2.0-0 <0.3.0-0',
+156 silly addNameRange   hasData: false }
+157 info addNameTag [ 'phantomizer', 'maboiteaspam/phantomizer' ]
+158 silly addNameRange { name: 'grunt', range: '>=0.4.0-0 <0.5.0-0', hasData: false }
+159 verbose url raw grunt-contrib-qunit
+160 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-qunit' ]
+161 verbose url resolved https://registry.npmjs.org/grunt-contrib-qunit
+162 info trying registry request attempt 1 at 15:35:02
+163 http GET https://registry.npmjs.org/grunt-contrib-qunit
+164 verbose url raw phantomizer
+165 verbose url resolving [ 'https://registry.npmjs.org/', './phantomizer' ]
+166 verbose url resolved https://registry.npmjs.org/phantomizer
+167 info trying registry request attempt 1 at 15:35:02
+168 http GET https://registry.npmjs.org/phantomizer
+169 verbose url raw grunt
+170 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+171 verbose url resolved https://registry.npmjs.org/grunt
+172 info trying registry request attempt 1 at 15:35:02
+173 verbose etag "B7RVWZHZ6UB5OWEZE6PM00A9F"
+174 http GET https://registry.npmjs.org/grunt
+175 http 304 https://registry.npmjs.org/grunt
+176 silly registry.get cb [ 304,
+176 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+176 silly registry.get     etag: '"B7RVWZHZ6UB5OWEZE6PM00A9F"',
+176 silly registry.get     date: 'Thu, 19 Sep 2013 07:35:03 GMT',
+176 silly registry.get     'content-length': '0' } ]
+177 verbose etag grunt from cache
+178 http 404 https://registry.npmjs.org/phantomizer
+179 silly registry.get cb [ 404,
+179 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+179 silly registry.get     date: 'Thu, 19 Sep 2013 07:35:03 GMT',
+179 silly registry.get     'content-type': 'application/json',
+179 silly registry.get     'content-length': '52',
+179 silly registry.get     'cache-control': 'must-revalidate' } ]
+180 info maybeGithub Attempting maboiteaspam/phantomizer from git://github.com/maboiteaspam/phantomizer
+181 silly lockFile 255a6c6f-hub-com-maboiteaspam-phantomizer git://github.com/maboiteaspam/phantomizer
+182 verbose lock git://github.com/maboiteaspam/phantomizer /home/clement/.npm/255a6c6f-hub-com-maboiteaspam-phantomizer.lock
+183 verbose addRemoteGit [ 'git://github.com/maboiteaspam/phantomizer', 'master' ]
+184 silly addNameRange number 2 { name: 'grunt', range: '>=0.4.0-0 <0.5.0-0', hasData: true }
+185 silly addNameRange versions [ 'grunt',
+185 silly addNameRange   [ '0.1.0',
+185 silly addNameRange     '0.1.1',
+185 silly addNameRange     '0.1.2',
+185 silly addNameRange     '0.2.0',
+185 silly addNameRange     '0.2.1',
+185 silly addNameRange     '0.2.2',
+185 silly addNameRange     '0.2.3',
+185 silly addNameRange     '0.2.4',
+185 silly addNameRange     '0.2.5',
+185 silly addNameRange     '0.2.6',
+185 silly addNameRange     '0.2.7',
+185 silly addNameRange     '0.2.8',
+185 silly addNameRange     '0.2.9',
+185 silly addNameRange     '0.2.10',
+185 silly addNameRange     '0.2.11',
+185 silly addNameRange     '0.2.12',
+185 silly addNameRange     '0.2.13',
+185 silly addNameRange     '0.2.14',
+185 silly addNameRange     '0.2.15',
+185 silly addNameRange     '0.3.0',
+185 silly addNameRange     '0.3.1',
+185 silly addNameRange     '0.3.2',
+185 silly addNameRange     '0.3.3',
+185 silly addNameRange     '0.3.4',
+185 silly addNameRange     '0.3.5',
+185 silly addNameRange     '0.3.6',
+185 silly addNameRange     '0.3.7',
+185 silly addNameRange     '0.3.8',
+185 silly addNameRange     '0.3.9',
+185 silly addNameRange     '0.3.10',
+185 silly addNameRange     '0.3.11',
+185 silly addNameRange     '0.3.12',
+185 silly addNameRange     '0.3.13',
+185 silly addNameRange     '0.3.14',
+185 silly addNameRange     '0.3.15',
+185 silly addNameRange     '0.3.16',
+185 silly addNameRange     '0.3.17',
+185 silly addNameRange     '0.4.0',
+185 silly addNameRange     '0.4.1',
+185 silly addNameRange     '0.3.13-a',
+185 silly addNameRange     '0.4.0-a',
+185 silly addNameRange     '0.4.0-rc1',
+185 silly addNameRange     '0.4.0-rc2',
+185 silly addNameRange     '0.4.0-rc3',
+185 silly addNameRange     '0.4.0-rc4',
+185 silly addNameRange     '0.4.0-rc5',
+185 silly addNameRange     '0.4.0-rc6',
+185 silly addNameRange     '0.4.0-rc7',
+185 silly addNameRange     '0.4.0-rc8' ] ]
+186 verbose addNamed [ 'grunt', '0.4.1' ]
+187 verbose addNamed [ '0.4.1', '0.4.1' ]
+188 silly lockFile f9e87dfe-grunt-0-4-1 grunt@0.4.1
+189 verbose lock grunt@0.4.1 /home/clement/.npm/f9e87dfe-grunt-0-4-1.lock
+190 silly lockFile f9e87dfe-grunt-0-4-1 grunt@0.4.1
+191 silly lockFile f9e87dfe-grunt-0-4-1 grunt@0.4.1
+192 silly lockFile 6aebe2f8-grunt-0-4-x grunt@0.4.x
+193 silly lockFile 6aebe2f8-grunt-0-4-x grunt@0.4.x
+194 http 200 https://registry.npmjs.org/grunt-contrib-qunit
+195 silly registry.get cb [ 200,
+195 silly registry.get   { vary: 'Accept',
+195 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+195 silly registry.get     etag: '"RWYZEVQ60F2811ZUAG77H0Y9"',
+195 silly registry.get     date: 'Thu, 19 Sep 2013 07:35:04 GMT',
+195 silly registry.get     'content-type': 'application/json',
+195 silly registry.get     'content-length': '71090' } ]
+196 silly addNameRange number 2 { name: 'grunt-contrib-qunit',
+196 silly addNameRange   range: '>=0.2.0-0 <0.3.0-0',
+196 silly addNameRange   hasData: true }
+197 silly addNameRange versions [ 'grunt-contrib-qunit',
+197 silly addNameRange   [ '0.1.0',
+197 silly addNameRange     '0.1.1',
+197 silly addNameRange     '0.2.0',
+197 silly addNameRange     '0.2.1',
+197 silly addNameRange     '0.2.2',
+197 silly addNameRange     '0.1.1-rc5',
+197 silly addNameRange     '0.1.1-rc6' ] ]
+198 verbose addNamed [ 'grunt-contrib-qunit', '0.2.2' ]
+199 verbose addNamed [ '0.2.2', '0.2.2' ]
+200 silly lockFile b816b757-grunt-contrib-qunit-0-2-2 grunt-contrib-qunit@0.2.2
+201 verbose lock grunt-contrib-qunit@0.2.2 /home/clement/.npm/b816b757-grunt-contrib-qunit-0-2-2.lock
+202 silly lockFile 94c9099e-it-grunt-contrib-qunit-0-2-2-tgz https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz
+203 verbose lock https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz /home/clement/.npm/94c9099e-it-grunt-contrib-qunit-0-2-2-tgz.lock
+204 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz',
+204 verbose addRemoteTarball   '8fbcea05f24b9d756b983e409d5b4c32be7f1f08' ]
+205 info retry fetch attempt 1 at 15:35:05
+206 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/tmp.tgz
+207 http GET https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz
+208 verbose git clone git://github.com/maboiteaspam/phantomizer Cloning into bare repository '/home/clement/.npm/_git-remotes/git-github-com-maboiteaspam-phantomizer-255a6c6f'...
+209 verbose git fetch -a origin (git://github.com/maboiteaspam/phantomizer)
+210 verbose git rev-list -n1 master 2db920585fb26b4a3f16b0f22c397b7f5542d7f3
+211 verbose resolved git url git://github.com/maboiteaspam/phantomizer#2db920585fb26b4a3f16b0f22c397b7f5542d7f3
+212 verbose tar unpack /home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/tmp.tgz
+213 silly lockFile 239f9942-05678-0-7175949548836797-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package
+214 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package /home/clement/.npm/239f9942-05678-0-7175949548836797-package.lock
+215 silly lockFile 2aad96d7-05678-0-7175949548836797-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/tmp.tgz
+216 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/tmp.tgz /home/clement/.npm/2aad96d7-05678-0-7175949548836797-tmp-tgz.lock
+217 silly gunzTarPerm modes [ '755', '644' ]
+218 silly gunzTarPerm extractEntry
+219 silly gunzTarPerm modified mode [ '', 509, 493 ]
+220 silly gunzTarPerm extractEntry .gitignore
+221 silly gunzTarPerm modified mode [ '.gitignore', 436, 420 ]
+222 silly gunzTarPerm extractEntry AUTHORS
+223 silly gunzTarPerm modified mode [ 'AUTHORS', 436, 420 ]
+224 silly gunzTarPerm extractEntry LICENSE
+225 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+226 silly gunzTarPerm extractEntry README
+227 silly gunzTarPerm modified mode [ 'README', 436, 420 ]
+228 silly gunzTarPerm extractEntry README.md
+229 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+230 silly gunzTarPerm extractEntry bin/
+231 silly gunzTarPerm modified mode [ 'bin/', 509, 493 ]
+232 silly gunzTarPerm extractEntry bin/phantomizer.js
+233 silly gunzTarPerm modified mode [ 'bin/phantomizer.js', 509, 493 ]
+234 silly gunzTarPerm extractEntry dist/
+235 silly gunzTarPerm modified mode [ 'dist/', 509, 493 ]
+236 silly gunzTarPerm extractEntry dist/Gruntfile.js
+237 silly gunzTarPerm modified mode [ 'dist/Gruntfile.js', 436, 420 ]
+238 silly gunzTarPerm extractEntry dist/config.json
+239 silly gunzTarPerm modified mode [ 'dist/config.json', 436, 420 ]
+240 silly gunzTarPerm extractEntry doc/
+241 silly gunzTarPerm modified mode [ 'doc/', 509, 493 ]
+242 silly gunzTarPerm extractEntry doc/config-doc.json
+243 silly gunzTarPerm modified mode [ 'doc/config-doc.json', 436, 420 ]
+244 silly gunzTarPerm extractEntry lib/
+245 silly gunzTarPerm modified mode [ 'lib/', 509, 493 ]
+246 silly gunzTarPerm extractEntry lib/delivery_queue.js
+247 silly gunzTarPerm modified mode [ 'lib/delivery_queue.js', 436, 420 ]
+248 silly gunzTarPerm extractEntry lib/html_builder.js
+249 silly gunzTarPerm modified mode [ 'lib/html_builder.js', 436, 420 ]
+250 silly gunzTarPerm extractEntry lib/phantomizer.js
+251 silly gunzTarPerm modified mode [ 'lib/phantomizer.js', 436, 420 ]
+252 silly gunzTarPerm extractEntry lib/webserver.js
+253 silly gunzTarPerm modified mode [ 'lib/webserver.js', 436, 420 ]
+254 silly gunzTarPerm extractEntry package.json
+255 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+256 silly lockFile 239f9942-05678-0-7175949548836797-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package
+257 silly lockFile 239f9942-05678-0-7175949548836797-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package
+258 silly lockFile 2aad96d7-05678-0-7175949548836797-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/tmp.tgz
+259 silly lockFile 2aad96d7-05678-0-7175949548836797-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/tmp.tgz
+260 verbose tar pack [ '/home/clement/.npm/phantomizer/0.1.0/package.tgz',
+260 verbose tar pack   '/home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package' ]
+261 verbose tarball /home/clement/.npm/phantomizer/0.1.0/package.tgz
+262 verbose folder /home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package
+263 silly lockFile 239f9942-05678-0-7175949548836797-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package
+264 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package /home/clement/.npm/239f9942-05678-0-7175949548836797-package.lock
+265 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+266 verbose lock tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz /home/clement/.npm/6b3eb190-pm-phantomizer-0-1-0-package-tgz.lock
+267 silly lockFile 239f9942-05678-0-7175949548836797-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package
+268 silly lockFile 239f9942-05678-0-7175949548836797-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105678-0.7175949548836797/package
+269 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+270 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+271 silly lockFile 36ec5833-nt-npm-phantomizer-0-1-0-package /home/clement/.npm/phantomizer/0.1.0/package
+272 verbose lock /home/clement/.npm/phantomizer/0.1.0/package /home/clement/.npm/36ec5833-nt-npm-phantomizer-0-1-0-package.lock
+273 silly lockFile 36ec5833-nt-npm-phantomizer-0-1-0-package /home/clement/.npm/phantomizer/0.1.0/package
+274 silly lockFile 36ec5833-nt-npm-phantomizer-0-1-0-package /home/clement/.npm/phantomizer/0.1.0/package
+275 verbose tar unpack /home/clement/.npm/phantomizer/0.1.0/package.tgz
+276 silly lockFile a0182a80-nt-npm-phantomizer-0-1-0-package tar:///home/clement/.npm/phantomizer/0.1.0/package
+277 verbose lock tar:///home/clement/.npm/phantomizer/0.1.0/package /home/clement/.npm/a0182a80-nt-npm-phantomizer-0-1-0-package.lock
+278 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+279 verbose lock tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz /home/clement/.npm/6b3eb190-pm-phantomizer-0-1-0-package-tgz.lock
+280 silly gunzTarPerm modes [ '755', '644' ]
+281 silly gunzTarPerm extractEntry package.json
+282 silly gunzTarPerm extractEntry .npmignore
+283 silly gunzTarPerm extractEntry README
+284 silly gunzTarPerm extractEntry README.md
+285 silly gunzTarPerm extractEntry LICENSE
+286 silly gunzTarPerm extractEntry AUTHORS
+287 silly gunzTarPerm extractEntry bin/phantomizer.js
+288 silly gunzTarPerm extractEntry dist/Gruntfile.js
+289 silly gunzTarPerm extractEntry dist/config.json
+290 silly gunzTarPerm extractEntry doc/config-doc.json
+291 silly gunzTarPerm extractEntry lib/delivery_queue.js
+292 silly gunzTarPerm extractEntry lib/html_builder.js
+293 silly gunzTarPerm extractEntry lib/phantomizer.js
+294 silly gunzTarPerm extractEntry lib/webserver.js
+295 silly lockFile a0182a80-nt-npm-phantomizer-0-1-0-package tar:///home/clement/.npm/phantomizer/0.1.0/package
+296 silly lockFile a0182a80-nt-npm-phantomizer-0-1-0-package tar:///home/clement/.npm/phantomizer/0.1.0/package
+297 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+298 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+299 verbose chmod /home/clement/.npm/phantomizer/0.1.0/package.tgz 644
+300 verbose chown /home/clement/.npm/phantomizer/0.1.0/package.tgz [ 1000, 1000 ]
+301 silly lockFile 255a6c6f-hub-com-maboiteaspam-phantomizer git://github.com/maboiteaspam/phantomizer
+302 silly lockFile 255a6c6f-hub-com-maboiteaspam-phantomizer git://github.com/maboiteaspam/phantomizer
+303 silly lockFile 7496f970-tomizer-maboiteaspam-phantomizer phantomizer@maboiteaspam/phantomizer
+304 silly lockFile 7496f970-tomizer-maboiteaspam-phantomizer phantomizer@maboiteaspam/phantomizer
+305 http 200 https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz
+306 verbose tar unpack /home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/tmp.tgz
+307 silly lockFile 82ab6f77-05198-0-8186803846620023-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package
+308 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package /home/clement/.npm/82ab6f77-05198-0-8186803846620023-package.lock
+309 silly lockFile 1455cd74-05198-0-8186803846620023-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/tmp.tgz
+310 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/tmp.tgz /home/clement/.npm/1455cd74-05198-0-8186803846620023-tmp-tgz.lock
+311 silly gunzTarPerm modes [ '755', '644' ]
+312 silly gunzTarPerm extractEntry package.json
+313 silly gunzTarPerm extractEntry .npmignore
+314 silly gunzTarPerm extractEntry README.md
+315 silly gunzTarPerm extractEntry Gruntfile.js
+316 silly gunzTarPerm extractEntry LICENSE-MIT
+317 silly gunzTarPerm extractEntry CONTRIBUTING.md
+318 silly gunzTarPerm extractEntry .jshintrc
+319 silly gunzTarPerm extractEntry .travis.yml
+320 silly gunzTarPerm extractEntry AUTHORS
+321 silly gunzTarPerm extractEntry docs/qunit-examples.md
+322 silly gunzTarPerm extractEntry docs/qunit-options.md
+323 silly gunzTarPerm extractEntry docs/qunit-overview.md
+324 silly gunzTarPerm extractEntry CHANGELOG
+325 silly gunzTarPerm extractEntry phantomjs/bridge.js
+326 silly gunzTarPerm extractEntry tasks/qunit.js
+327 silly gunzTarPerm extractEntry test/qunit_test.js
+328 silly gunzTarPerm extractEntry test/qunit_test_error.js
+329 silly gunzTarPerm extractEntry test/libs/qunit.js
+330 silly gunzTarPerm extractEntry test/libs/qunit.css
+331 silly gunzTarPerm extractEntry test/qunit1.html
+332 silly gunzTarPerm extractEntry test/qunit2.html
+333 silly lockFile 82ab6f77-05198-0-8186803846620023-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package
+334 silly lockFile 82ab6f77-05198-0-8186803846620023-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package
+335 silly lockFile 1455cd74-05198-0-8186803846620023-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/tmp.tgz
+336 silly lockFile 1455cd74-05198-0-8186803846620023-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/tmp.tgz
+337 verbose tar pack [ '/home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz',
+337 verbose tar pack   '/home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package' ]
+338 verbose tarball /home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+339 verbose folder /home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package
+340 silly lockFile 82ab6f77-05198-0-8186803846620023-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package
+341 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package /home/clement/.npm/82ab6f77-05198-0-8186803846620023-package.lock
+342 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+343 verbose lock tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz /home/clement/.npm/061546ca--contrib-qunit-0-2-2-package-tgz.lock
+344 silly lockFile 82ab6f77-05198-0-8186803846620023-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package
+345 silly lockFile 82ab6f77-05198-0-8186803846620023-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576105198-0.8186803846620023/package
+346 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+347 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+348 silly lockFile 593f4b13-runt-contrib-qunit-0-2-2-package /home/clement/.npm/grunt-contrib-qunit/0.2.2/package
+349 verbose lock /home/clement/.npm/grunt-contrib-qunit/0.2.2/package /home/clement/.npm/593f4b13-runt-contrib-qunit-0-2-2-package.lock
+350 silly lockFile 593f4b13-runt-contrib-qunit-0-2-2-package /home/clement/.npm/grunt-contrib-qunit/0.2.2/package
+351 silly lockFile 593f4b13-runt-contrib-qunit-0-2-2-package /home/clement/.npm/grunt-contrib-qunit/0.2.2/package
+352 verbose tar unpack /home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+353 silly lockFile 3c1ad99a-runt-contrib-qunit-0-2-2-package tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package
+354 verbose lock tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package /home/clement/.npm/3c1ad99a-runt-contrib-qunit-0-2-2-package.lock
+355 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+356 verbose lock tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz /home/clement/.npm/061546ca--contrib-qunit-0-2-2-package-tgz.lock
+357 silly gunzTarPerm modes [ '755', '644' ]
+358 silly gunzTarPerm extractEntry package.json
+359 silly gunzTarPerm extractEntry .npmignore
+360 silly gunzTarPerm extractEntry README.md
+361 silly gunzTarPerm extractEntry Gruntfile.js
+362 silly gunzTarPerm extractEntry LICENSE-MIT
+363 silly gunzTarPerm extractEntry CONTRIBUTING.md
+364 silly gunzTarPerm extractEntry .jshintrc
+365 silly gunzTarPerm extractEntry .travis.yml
+366 silly gunzTarPerm extractEntry AUTHORS
+367 silly gunzTarPerm extractEntry docs/qunit-examples.md
+368 silly gunzTarPerm extractEntry docs/qunit-options.md
+369 silly gunzTarPerm extractEntry docs/qunit-overview.md
+370 silly gunzTarPerm extractEntry CHANGELOG
+371 silly gunzTarPerm extractEntry phantomjs/bridge.js
+372 silly gunzTarPerm extractEntry tasks/qunit.js
+373 silly gunzTarPerm extractEntry test/qunit_test.js
+374 silly gunzTarPerm extractEntry test/qunit_test_error.js
+375 silly gunzTarPerm extractEntry test/libs/qunit.js
+376 silly gunzTarPerm extractEntry test/libs/qunit.css
+377 silly gunzTarPerm extractEntry test/qunit1.html
+378 silly gunzTarPerm extractEntry test/qunit2.html
+379 silly lockFile 3c1ad99a-runt-contrib-qunit-0-2-2-package tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package
+380 silly lockFile 3c1ad99a-runt-contrib-qunit-0-2-2-package tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package
+381 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+382 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+383 verbose chmod /home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz 644
+384 verbose chown /home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz [ 1000, 1000 ]
+385 silly lockFile 94c9099e-it-grunt-contrib-qunit-0-2-2-tgz https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz
+386 silly lockFile 94c9099e-it-grunt-contrib-qunit-0-2-2-tgz https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz
+387 silly lockFile b816b757-grunt-contrib-qunit-0-2-2 grunt-contrib-qunit@0.2.2
+388 silly lockFile b816b757-grunt-contrib-qunit-0-2-2 grunt-contrib-qunit@0.2.2
+389 silly lockFile 6410ee08-grunt-contrib-qunit-0-2-x grunt-contrib-qunit@0.2.x
+390 silly lockFile 6410ee08-grunt-contrib-qunit-0-2-x grunt-contrib-qunit@0.2.x
+391 silly resolved [ { name: 'grunt',
+391 silly resolved     description: 'The JavaScript Task Runner',
+391 silly resolved     version: '0.4.1',
+391 silly resolved     author: { name: '"Cowboy" Ben Alman', url: 'http://benalman.com/' },
+391 silly resolved     homepage: 'http://gruntjs.com/',
+391 silly resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt.git' },
+391 silly resolved     bugs: { url: 'http://github.com/gruntjs/grunt/issues' },
+391 silly resolved     licenses: [ [Object] ],
+391 silly resolved     main: 'lib/grunt',
+391 silly resolved     scripts: { test: 'grunt test' },
+391 silly resolved     engines: { node: '>= 0.8.0' },
+391 silly resolved     keywords:
+391 silly resolved      [ 'task',
+391 silly resolved        'async',
+391 silly resolved        'cli',
+391 silly resolved        'minify',
+391 silly resolved        'uglify',
+391 silly resolved        'build',
+391 silly resolved        'lodash',
+391 silly resolved        'unit',
+391 silly resolved        'test',
+391 silly resolved        'qunit',
+391 silly resolved        'nodeunit',
+391 silly resolved        'server',
+391 silly resolved        'init',
+391 silly resolved        'scaffold',
+391 silly resolved        'make',
+391 silly resolved        'jake',
+391 silly resolved        'tool' ],
+391 silly resolved     dependencies:
+391 silly resolved      { async: '~0.1.22',
+391 silly resolved        'coffee-script': '~1.3.3',
+391 silly resolved        colors: '~0.6.0-1',
+391 silly resolved        dateformat: '1.0.2-1.2.3',
+391 silly resolved        eventemitter2: '~0.4.9',
+391 silly resolved        'findup-sync': '~0.1.0',
+391 silly resolved        glob: '~3.1.21',
+391 silly resolved        hooker: '~0.2.3',
+391 silly resolved        'iconv-lite': '~0.2.5',
+391 silly resolved        minimatch: '~0.2.6',
+391 silly resolved        nopt: '~1.0.10',
+391 silly resolved        rimraf: '~2.0.2',
+391 silly resolved        lodash: '~0.9.0',
+391 silly resolved        'underscore.string': '~2.2.0rc',
+391 silly resolved        which: '~1.0.5',
+391 silly resolved        'js-yaml': '~2.0.2' },
+391 silly resolved     devDependencies:
+391 silly resolved      { temporary: '~0.0.4',
+391 silly resolved        'grunt-contrib-jshint': '~0.1.1',
+391 silly resolved        'grunt-contrib-nodeunit': '~0.1.2',
+391 silly resolved        'grunt-contrib-watch': '~0.2.0',
+391 silly resolved        difflet: '~0.2.3' },
+391 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+391 silly resolved     readme: '# Grunt: The JavaScript Task Runner [![Build Status](https://secure.travis-ci.org/gruntjs/grunt.png?branch=master)](http://travis-ci.org/gruntjs/grunt)\n\n### Documentation\n\nVisit the [gruntjs.com](http://gruntjs.com/) website for all the things.\n\n### Support / Contributing\nBefore you make an issue, please read our [Contributing](http://gruntjs.com/contributing) guide.\n\nYou can find the grunt team in [#grunt on irc.freenode.net](irc://irc.freenode.net/#grunt).\n\n### Release History\nSee the [CHANGELOG](CHANGELOG).\n',
+391 silly resolved     readmeFilename: 'README.md',
+391 silly resolved     _id: 'grunt@0.4.1',
+391 silly resolved     _from: 'grunt@0.4.x' },
+391 silly resolved   { name: 'phantomizer',
+391 silly resolved     version: '0.1.0',
+391 silly resolved     private: true,
+391 silly resolved     preferGlobal: true,
+391 silly resolved     description: 'Embedded web development environment, helps to build better HTML ui',
+391 silly resolved     keywords: [],
+391 silly resolved     bugs:
+391 silly resolved      { url: 'http://github.com/maboiteaspam/phantomizer/issues',
+391 silly resolved        email: 'none@host.com' },
+391 silly resolved     license: 'mit',
+391 silly resolved     'directories.lib': 'lib/',
+391 silly resolved     'directories.example': 'example/',
+391 silly resolved     repository:
+391 silly resolved      { type: 'git',
+391 silly resolved        url: 'http://github.com/maboiteaspam/phantomizer.git' },
+391 silly resolved     main: 'lib/phantomizer',
+391 silly resolved     bin: { phantomizer: './bin/phantomizer.js' },
+391 silly resolved     dependencies:
+391 silly resolved      { grunt: '0.4.x',
+391 silly resolved        connect: '2.7.x',
+391 silly resolved        lodash: '0.9.x',
+391 silly resolved        optimist: '0.4.x',
+391 silly resolved        'phantomizer-websupport': 'http://github.com/maboiteaspam/phantomizer-websupport.git',
+391 silly resolved        'phantomizer-libutil': 'http://github.com/maboiteaspam/phantomizer-libutil.git',
+391 silly resolved        'phantomizer-grunt': 'http://github.com/maboiteaspam/phantomizer-grunt.git',
+391 silly resolved        'phantomizer-styledocco': 'http://github.com/maboiteaspam/phantomizer-styledocco.git',
+391 silly resolved        'phantomizer-docco': 'http://github.com/maboiteaspam/phantomizer-docco.git',
+391 silly resolved        'phantomizer-html-builder': 'http://github.com/maboiteaspam/phantomizer-html-builder.git',
+391 silly resolved        'phantomizer-export-build': 'http://github.com/maboiteaspam/phantomizer-export-build.git' },
+391 silly resolved     devDependencies: {},
+391 silly resolved     contributors: [ [Object] ],
+391 silly resolved     readme: 'ERROR: No README data found!',
+391 silly resolved     readmeFilename: 'README',
+391 silly resolved     _id: 'phantomizer@0.1.0',
+391 silly resolved     dist: { shasum: '83007b6c056b823c094b954be9eef1bafdfe190c' },
+391 silly resolved     _resolved: 'git://github.com/maboiteaspam/phantomizer#2db920585fb26b4a3f16b0f22c397b7f5542d7f3',
+391 silly resolved     _from: 'git://github.com/maboiteaspam/phantomizer',
+391 silly resolved     _fromGithub: true },
+391 silly resolved   { name: 'grunt-contrib-qunit',
+391 silly resolved     description: 'Run QUnit unit tests in a headless PhantomJS instance.',
+391 silly resolved     version: '0.2.2',
+391 silly resolved     homepage: 'https://github.com/gruntjs/grunt-contrib-qunit',
+391 silly resolved     author: { name: 'Grunt Team', url: 'http://gruntjs.com/' },
+391 silly resolved     repository:
+391 silly resolved      { type: 'git',
+391 silly resolved        url: 'git://github.com/gruntjs/grunt-contrib-qunit.git' },
+391 silly resolved     bugs: { url: 'https://github.com/gruntjs/grunt-contrib-qunit/issues' },
+391 silly resolved     licenses: [ [Object] ],
+391 silly resolved     main: 'Gruntfile.js',
+391 silly resolved     engines: { node: '>= 0.8.0' },
+391 silly resolved     scripts: { test: 'grunt test' },
+391 silly resolved     dependencies: { 'grunt-lib-phantomjs': '~0.3.0' },
+391 silly resolved     devDependencies:
+391 silly resolved      { 'grunt-contrib-jshint': '~0.6.0',
+391 silly resolved        'grunt-contrib-connect': '~0.3.0',
+391 silly resolved        'grunt-contrib-internal': '~0.4.5',
+391 silly resolved        grunt: '~0.4.1',
+391 silly resolved        difflet: '~0.2.3' },
+391 silly resolved     peerDependencies: { grunt: '~0.4.0' },
+391 silly resolved     keywords: [ 'gruntplugin' ],
+391 silly resolved     contributors: [ [Object], [Object] ],
+391 silly resolved     readme: '# grunt-contrib-qunit [![Build Status](https://travis-ci.org/gruntjs/grunt-contrib-qunit.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-qunit)\n\n> Run QUnit unit tests in a headless PhantomJS instance.\n\n\n\n## Getting Started\nThis plugin requires Grunt `~0.4.0`\n\nIf you haven\'t used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you\'re familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-contrib-qunit --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks(\'grunt-contrib-qunit\');\n```\n\n\n\n\n## Qunit task\n_Run this task with the `grunt qunit` command._\n\nTask targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.\n\nWhen installed by npm, this plugin will automatically download and install [PhantomJS][] locally via the [grunt-lib-phantomjs][] library.\n\n[PhantomJS]: http://www.phantomjs.org/\n[grunt-lib-phantomjs]: https://github.com/gruntjs/grunt-lib-phantomjs\n\nAlso note that running grunt with the `--debug` flag will output a lot of PhantomJS-specific debugging information. This can be very helpful in seeing what actual URIs are being requested and received by PhantomJS.\n### Options\n\n#### timeout\nType: `Number`  \nDefault: `5000`\n\nThe amount of time (in milliseconds) that grunt will wait for a QUnit `start()` call before failing the task with an error.\n\n#### inject\nType: `String`  \nDefault: (built-in)\n\nPath to an alternate QUnit-PhantomJS bridge file to be injected. See [the built-in bridge](https://github.com/gruntjs/grunt-contrib-qunit/blob/master/phantomjs/bridge.js) for more information.\n\n#### urls\nType: `Array`  \nDefault: `[]`\n\nAbsolute `http://` or `https://` urls to be passed to PhantomJS. Specified URLs will be merged with any specified `src` files first. Note that urls must be served by a web server, and since this task doesn\'t contain a web server, one will need to be configured separately. The [grunt-contrib-connect plugin](https://github.com/gruntjs/grunt-contrib-connect) provides a basic web server.\n\n#### (-- PhantomJS arguments)\nType: `String`  \nDefault: (none)\n\nAdditional `--` style arguments that need to be passed in to PhantomJS may be specified as options, like `{\'--option\': \'value\'}`. This may be useful for specifying a cookies file, local storage file, or a proxy. See the [PhantomJS API Reference][] for a list of `--` options that PhantomJS supports.\n\n### Usage examples\n\n#### Wildcards\nIn this example, `grunt qunit:all` will test all `.html` files in the test directory _and all subdirectories_. First, the wildcard is expanded to match each individual file. Then, each matched filename is passed to [PhantomJS][] (one at a time).\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  qunit: {\n    all: [\'test/**/*.html\']\n  }\n});\n```\n\n#### Testing via http:// or https://\nIn circumstances where running unit tests from local files is inadequate, you can specify `http://` or `https://` URLs via the `urls` option. Each URL is passed to [PhantomJS][] (one at a time).\n\nIn this example, `grunt qunit` will test two files, served from the server running at `localhost:8000`.\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  qunit: {\n    all: {\n      options: {\n        urls: [\n          \'http://localhost:8000/test/foo.html\',\n          \'http://localhost:8000/test/bar.html\'\n        ]\n      }\n    }\n  }\n});\n```\n\nWildcards and URLs may be combined by specifying both.\n\n#### Using the grunt-contrib-connect plugin\nIt\'s important to note that grunt does not automatically start a `localhost` web server. That being said, the [grunt-contrib-connect plugin][] `connect` task can be run before the `qunit` task to serve files via a simple [connect][] web server.\n\n[grunt-contrib-connect plugin]: https://github.com/gruntjs/grunt-contrib-connect\n[connect]: http://www.senchalabs.org/connect/\n\nIn the following example, if a web server isn\'t running at `localhost:8000`, running `grunt qunit` with the following configuration will fail because the `qunit` task won\'t be able to load the specified URLs. However, running `grunt connect qunit` will first start a static [connect][] web server at `localhost:8000` with its base path set to the Gruntfile\'s directory. Then, the `qunit` task will be run, requesting the specified URLs.\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  qunit: {\n    all: {\n      options: {\n        urls: [\n          \'http://localhost:8000/test/foo.html\',\n          \'http://localhost:8000/test/bar.html\',\n        ]\n      }\n    }\n  },\n  connect: {\n    server: {\n      options: {\n        port: 8000,\n        base: \'.\'\n      }\n    }\n  }\n});\n\n// This plugin provides the "connect" task.\ngrunt.loadNpmTasks(\'grunt-contrib-connect\');\n\n// A convenient task alias.\ngrunt.registerTask(\'test\', [\'connect\', \'qunit\']);\n```\n\n#### Custom timeouts and PhantomJS options\nIn the following example, the default timeout value of `5000` is overridden with the value `10000` (timeout values are in milliseconds). Additionally, PhantomJS will read stored cookies from the specified file. See the [PhantomJS API Reference][] for a list of `--` options that PhantomJS supports.\n\n[PhantomJS API Reference]: https://github.com/ariya/phantomjs/wiki/API-Reference\n\n```js\n// Project configuration.\ngrunt.initConfig({\n  qunit: {\n    options: {\n      timeout: 10000,\n      \'--cookies-file\': \'misc/cookies.txt\'\n    },\n    all: [\'test/**/*.html\']\n  }\n});\n```\n\n#### Events and reporting\n[QUnit callback](http://api.qunitjs.com/category/callbacks/) methods and arguments are also emitted through grunt\'s event system so that you may build custom reporting tools. Please refer to to the QUnit documentation for more information.\n\nThe events (with arguments) are as follows:\n\n* `qunit.begin`\n* `qunit.moduleStart`: name\n* `qunit.testStart`: name\n* `qunit.log`: result, actual, expected, message, source\n* `qunit.testDone`: name, failed, passed, total\n* `qunit.moduleDone`: name, failed, passed, total\n* `qunit.done`: failed, passed, total, runtime\n\nIn addition to QUnit callback-named events, the following event is emitted when [PhantomJS][] is spawned for a test:\n\n* `qunit.spawn`: url\n\nYou may listen for these events like so:\n\n```js\ngrunt.event.on(\'qunit.spawn\', function (url) {\n  grunt.log.ok("Running test: " + url);\n});\n```\n\n\n## Release History\n\n * 2013-06-06   v0.2.2   Warn if no assertions ran in a single test. Spaces instead of newlines for clickable urls. Wrap bridge.js in a IIFE.\n * 2013-04-05   v0.2.1   Update to use PhantomJS 1.9.0. Fixes PhantomJS not found errors.\n * 2013-02-28   v0.2.0   Update to use PhantomJS 1.8.1.\n * 2013-02-15   v0.1.1   First official release for Grunt 0.4.0.\n * 2013-01-18   v0.1.1rc6   Updating grunt/gruntplugin dependencies to rc6. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.\n * 2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5. Switching to this.filesSrc api. Adding "urls" option for specifying absolute test URLs.\n * 2012-10-05   v0.1.0   Work in progress, not yet officially released.\n\n---\n\nTask submitted by ["Cowboy" Ben Alman](http://benalman.com/)\n\n*This file was generated on Thu Jun 06 2013 22:11:10.*\n',
+391 silly resolved     readmeFilename: 'README.md',
+391 silly resolved     _id: 'grunt-contrib-qunit@0.2.2',
+391 silly resolved     dist: { shasum: '36bcc8204db55f50516fa5014017e3581936d704' },
+391 silly resolved     _from: 'grunt-contrib-qunit@0.2.x',
+391 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-contrib-qunit/-/grunt-contrib-qunit-0.2.2.tgz' } ]
+392 info install grunt@0.4.1 into /home/clement/lib/node_modules/phantomizer-qunit-runner
+393 info install phantomizer@0.1.0 into /home/clement/lib/node_modules/phantomizer-qunit-runner
+394 info install grunt-contrib-qunit@0.2.2 into /home/clement/lib/node_modules/phantomizer-qunit-runner
+395 info installOne grunt@0.4.1
+396 info installOne phantomizer@0.1.0
+397 info installOne grunt-contrib-qunit@0.2.2
+398 info /home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt unbuild
+399 info /home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/phantomizer unbuild
+400 info /home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt-contrib-qunit unbuild
+401 verbose tar unpack /home/clement/.npm/grunt/0.4.1/package.tgz
+402 silly lockFile 9e535979--qunit-runner-node-modules-grunt tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt
+403 verbose lock tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt /home/clement/.npm/9e535979--qunit-runner-node-modules-grunt.lock
+404 silly lockFile 4699d84b-ment-npm-grunt-0-4-1-package-tgz tar:///home/clement/.npm/grunt/0.4.1/package.tgz
+405 verbose lock tar:///home/clement/.npm/grunt/0.4.1/package.tgz /home/clement/.npm/4699d84b-ment-npm-grunt-0-4-1-package-tgz.lock
+406 verbose tar unpack /home/clement/.npm/phantomizer/0.1.0/package.tgz
+407 silly lockFile 77963014--runner-node-modules-phantomizer tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/phantomizer
+408 verbose lock tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/phantomizer /home/clement/.npm/77963014--runner-node-modules-phantomizer.lock
+409 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+410 verbose lock tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz /home/clement/.npm/6b3eb190-pm-phantomizer-0-1-0-package-tgz.lock
+411 verbose tar unpack /home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+412 silly lockFile 262d0fd1-node-modules-grunt-contrib-qunit tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt-contrib-qunit
+413 verbose lock tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt-contrib-qunit /home/clement/.npm/262d0fd1-node-modules-grunt-contrib-qunit.lock
+414 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+415 verbose lock tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz /home/clement/.npm/061546ca--contrib-qunit-0-2-2-package-tgz.lock
+416 silly gunzTarPerm modes [ '755', '644' ]
+417 silly gunzTarPerm modes [ '755', '644' ]
+418 silly gunzTarPerm modes [ '755', '644' ]
+419 silly gunzTarPerm extractEntry package.json
+420 silly gunzTarPerm extractEntry package.json
+421 silly gunzTarPerm extractEntry package.json
+422 silly gunzTarPerm extractEntry .npmignore
+423 silly gunzTarPerm extractEntry README.md
+424 silly gunzTarPerm extractEntry .npmignore
+425 silly gunzTarPerm extractEntry README
+426 silly gunzTarPerm extractEntry .npmignore
+427 silly gunzTarPerm extractEntry README.md
+428 silly gunzTarPerm extractEntry Gruntfile.js
+429 silly gunzTarPerm extractEntry custom-gruntfile.js
+430 silly gunzTarPerm extractEntry README.md
+431 silly gunzTarPerm extractEntry LICENSE
+432 silly gunzTarPerm extractEntry Gruntfile.js
+433 silly gunzTarPerm extractEntry LICENSE-MIT
+434 silly gunzTarPerm extractEntry test/fixtures/a.js
+435 silly gunzTarPerm extractEntry test/fixtures/b.js
+436 silly gunzTarPerm extractEntry AUTHORS
+437 silly gunzTarPerm extractEntry bin/phantomizer.js
+438 silly gunzTarPerm extractEntry CONTRIBUTING.md
+439 silly gunzTarPerm extractEntry dist/Gruntfile.js
+440 silly gunzTarPerm extractEntry test/fixtures/banner.js
+441 silly gunzTarPerm extractEntry test/fixtures/banner2.js
+442 silly gunzTarPerm extractEntry dist/config.json
+443 silly gunzTarPerm extractEntry doc/config-doc.json
+444 silly gunzTarPerm extractEntry test/fixtures/banner3.js
+445 silly gunzTarPerm extractEntry test/fixtures/Gruntfile-print-text.js
+446 silly gunzTarPerm extractEntry .jshintrc
+447 silly gunzTarPerm extractEntry .travis.yml
+448 silly gunzTarPerm extractEntry lib/delivery_queue.js
+449 silly gunzTarPerm extractEntry lib/html_builder.js
+450 silly gunzTarPerm extractEntry test/fixtures/spawn-multibyte.js
+451 silly gunzTarPerm extractEntry test/fixtures/spawn.js
+452 silly gunzTarPerm extractEntry test/fixtures/iso-8859-1.json
+453 silly gunzTarPerm extractEntry test/fixtures/expand/README.md
+454 silly gunzTarPerm extractEntry test/fixtures/expand/css/baz.css
+455 silly gunzTarPerm extractEntry test/fixtures/expand/css/qux.css
+456 silly gunzTarPerm extractEntry test/fixtures/expand/deep/deep.txt
+457 silly gunzTarPerm extractEntry test/fixtures/expand/deep/deeper/deeper.txt
+458 silly gunzTarPerm extractEntry test/fixtures/expand/deep/deeper/deepest/deepest.txt
+459 silly gunzTarPerm extractEntry test/fixtures/expand/js/bar.js
+460 silly gunzTarPerm extractEntry test/fixtures/expand/js/foo.js
+461 silly gunzTarPerm extractEntry test/fixtures/expand-mapping-ext/dir.ectory/file-no-extension
+462 silly gunzTarPerm extractEntry test/fixtures/expand-mapping-ext/dir.ectory/sub.dir.ectory/file.ext.ension
+463 silly gunzTarPerm extractEntry test/fixtures/expand-mapping-ext/file.ext.ension
+464 silly gunzTarPerm extractEntry test/fixtures/files/dist/built-123-a.js
+465 silly gunzTarPerm extractEntry test/fixtures/files/dist/built-123-b.js
+466 silly gunzTarPerm extractEntry test/fixtures/files/dist/built-a.js
+467 silly gunzTarPerm extractEntry test/fixtures/files/dist/built-b.js
+468 silly gunzTarPerm extractEntry test/fixtures/files/dist/built.js
+469 silly gunzTarPerm extractEntry test/fixtures/files/src/file1-123.js
+470 silly gunzTarPerm extractEntry test/fixtures/files/src/file1.js
+471 silly gunzTarPerm extractEntry test/fixtures/files/src/file2-123.js
+472 silly gunzTarPerm extractEntry test/fixtures/files/src/file2.js
+473 silly gunzTarPerm extractEntry test/fixtures/BOM.txt
+474 silly gunzTarPerm extractEntry test/fixtures/iso-8859-1.txt
+475 silly gunzTarPerm extractEntry test/fixtures/iso-8859-1.yaml
+476 silly gunzTarPerm extractEntry test/fixtures/lint.txt
+477 silly gunzTarPerm extractEntry test/fixtures/no_BOM.txt
+478 silly gunzTarPerm extractEntry test/fixtures/octocat.png
+479 silly gunzTarPerm extractEntry test/fixtures/exec.cmd
+480 silly gunzTarPerm extractEntry test/fixtures/exec.sh
+481 silly gunzTarPerm extractEntry test/fixtures/template.txt
+482 silly gunzTarPerm extractEntry test/fixtures/test.json
+483 silly gunzTarPerm extractEntry test/fixtures/utf8.json
+484 silly gunzTarPerm extractEntry test/fixtures/utf8.txt
+485 silly gunzTarPerm extractEntry test/fixtures/utf8.yaml
+486 silly gunzTarPerm extractEntry test/grunt/config_test.js
+487 silly gunzTarPerm extractEntry test/grunt/event_test.js
+488 silly gunzTarPerm extractEntry test/grunt/file_test.js
+489 silly gunzTarPerm extractEntry test/grunt/log_test.js
+490 silly gunzTarPerm extractEntry test/grunt/option_test.js
+491 silly gunzTarPerm extractEntry test/grunt/task_test.js
+492 silly gunzTarPerm extractEntry test/grunt/template_test.js
+493 silly gunzTarPerm extractEntry test/grunt/util_test.js
+494 silly gunzTarPerm extractEntry test/gruntfile/multi-task-files.js
+495 silly gunzTarPerm extractEntry test/util/namespace_test.js
+496 silly gunzTarPerm extractEntry test/util/task_test.js
+497 silly gunzTarPerm extractEntry .travis.yml
+498 silly gunzTarPerm extractEntry AUTHORS
+499 silly gunzTarPerm extractEntry CHANGELOG
+500 silly gunzTarPerm extractEntry docs/README.md
+501 silly gunzTarPerm extractEntry lib/grunt.js
+502 silly gunzTarPerm extractEntry lib/grunt/cli.js
+503 silly gunzTarPerm extractEntry lib/grunt/event.js
+504 silly gunzTarPerm extractEntry lib/grunt/fail.js
+505 silly gunzTarPerm extractEntry lib/grunt/file.js
+506 silly gunzTarPerm extractEntry lib/grunt/config.js
+507 silly gunzTarPerm extractEntry lib/grunt/log.js
+508 silly gunzTarPerm extractEntry lib/grunt/option.js
+509 silly gunzTarPerm extractEntry lib/grunt/task.js
+510 silly gunzTarPerm extractEntry lib/grunt/template.js
+511 silly gunzTarPerm extractEntry lib/grunt/util.js
+512 silly gunzTarPerm extractEntry lib/grunt/help.js
+513 silly gunzTarPerm extractEntry lib/util/exit.js
+514 silly gunzTarPerm extractEntry lib/util/namespace.js
+515 silly gunzTarPerm extractEntry lib/util/task.js
+516 silly gunzTarPerm extractEntry CONTRIBUTING.md
+517 silly gunzTarPerm extractEntry LICENSE-MIT
+518 silly gunzTarPerm extractEntry lib/phantomizer.js
+519 silly gunzTarPerm extractEntry lib/webserver.js
+520 silly gunzTarPerm extractEntry AUTHORS
+521 silly gunzTarPerm extractEntry docs/qunit-examples.md
+522 silly gunzTarPerm extractEntry docs/qunit-options.md
+523 silly gunzTarPerm extractEntry docs/qunit-overview.md
+524 silly gunzTarPerm extractEntry CHANGELOG
+525 silly gunzTarPerm extractEntry phantomjs/bridge.js
+526 silly gunzTarPerm extractEntry tasks/qunit.js
+527 silly gunzTarPerm extractEntry test/qunit_test.js
+528 silly gunzTarPerm extractEntry test/qunit_test_error.js
+529 silly gunzTarPerm extractEntry test/libs/qunit.js
+530 silly gunzTarPerm extractEntry test/libs/qunit.css
+531 silly gunzTarPerm extractEntry test/qunit1.html
+532 silly gunzTarPerm extractEntry test/qunit2.html
+533 silly lockFile 77963014--runner-node-modules-phantomizer tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/phantomizer
+534 silly lockFile 77963014--runner-node-modules-phantomizer tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/phantomizer
+535 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+536 silly lockFile 6b3eb190-pm-phantomizer-0-1-0-package-tgz tar:///home/clement/.npm/phantomizer/0.1.0/package.tgz
+537 info preinstall phantomizer@0.1.0
+538 verbose readDependencies using package.json deps
+539 verbose readDependencies using package.json deps
+540 verbose cache add [ 'connect@2.7.x', null ]
+541 verbose cache add name=undefined spec="connect@2.7.x" args=["connect@2.7.x",null]
+542 verbose parsed url { protocol: null,
+542 verbose parsed url   slashes: null,
+542 verbose parsed url   auth: null,
+542 verbose parsed url   host: null,
+542 verbose parsed url   port: null,
+542 verbose parsed url   hostname: null,
+542 verbose parsed url   hash: null,
+542 verbose parsed url   search: null,
+542 verbose parsed url   query: null,
+542 verbose parsed url   pathname: 'connect@2.7.x',
+542 verbose parsed url   path: 'connect@2.7.x',
+542 verbose parsed url   href: 'connect@2.7.x' }
+543 verbose cache add name="connect" spec="2.7.x" args=["connect","2.7.x"]
+544 verbose parsed url { protocol: null,
+544 verbose parsed url   slashes: null,
+544 verbose parsed url   auth: null,
+544 verbose parsed url   host: null,
+544 verbose parsed url   port: null,
+544 verbose parsed url   hostname: null,
+544 verbose parsed url   hash: null,
+544 verbose parsed url   search: null,
+544 verbose parsed url   query: null,
+544 verbose parsed url   pathname: '2.7.x',
+544 verbose parsed url   path: '2.7.x',
+544 verbose parsed url   href: '2.7.x' }
+545 verbose addNamed [ 'connect', '2.7.x' ]
+546 verbose addNamed [ null, '>=2.7.0-0 <2.8.0-0' ]
+547 silly lockFile 9a1b93d2-connect-2-7-x connect@2.7.x
+548 verbose lock connect@2.7.x /home/clement/.npm/9a1b93d2-connect-2-7-x.lock
+549 verbose cache add [ 'lodash@0.9.x', null ]
+550 verbose cache add name=undefined spec="lodash@0.9.x" args=["lodash@0.9.x",null]
+551 verbose parsed url { protocol: null,
+551 verbose parsed url   slashes: null,
+551 verbose parsed url   auth: null,
+551 verbose parsed url   host: null,
+551 verbose parsed url   port: null,
+551 verbose parsed url   hostname: null,
+551 verbose parsed url   hash: null,
+551 verbose parsed url   search: null,
+551 verbose parsed url   query: null,
+551 verbose parsed url   pathname: 'lodash@0.9.x',
+551 verbose parsed url   path: 'lodash@0.9.x',
+551 verbose parsed url   href: 'lodash@0.9.x' }
+552 verbose cache add name="lodash" spec="0.9.x" args=["lodash","0.9.x"]
+553 verbose parsed url { protocol: null,
+553 verbose parsed url   slashes: null,
+553 verbose parsed url   auth: null,
+553 verbose parsed url   host: null,
+553 verbose parsed url   port: null,
+553 verbose parsed url   hostname: null,
+553 verbose parsed url   hash: null,
+553 verbose parsed url   search: null,
+553 verbose parsed url   query: null,
+553 verbose parsed url   pathname: '0.9.x',
+553 verbose parsed url   path: '0.9.x',
+553 verbose parsed url   href: '0.9.x' }
+554 verbose addNamed [ 'lodash', '0.9.x' ]
+555 verbose addNamed [ null, '>=0.9.0-0 <0.10.0-0' ]
+556 silly lockFile cea8212f-lodash-0-9-x lodash@0.9.x
+557 verbose lock lodash@0.9.x /home/clement/.npm/cea8212f-lodash-0-9-x.lock
+558 verbose cache add [ 'optimist@0.4.x', null ]
+559 verbose cache add name=undefined spec="optimist@0.4.x" args=["optimist@0.4.x",null]
+560 verbose parsed url { protocol: null,
+560 verbose parsed url   slashes: null,
+560 verbose parsed url   auth: null,
+560 verbose parsed url   host: null,
+560 verbose parsed url   port: null,
+560 verbose parsed url   hostname: null,
+560 verbose parsed url   hash: null,
+560 verbose parsed url   search: null,
+560 verbose parsed url   query: null,
+560 verbose parsed url   pathname: 'optimist@0.4.x',
+560 verbose parsed url   path: 'optimist@0.4.x',
+560 verbose parsed url   href: 'optimist@0.4.x' }
+561 verbose cache add name="optimist" spec="0.4.x" args=["optimist","0.4.x"]
+562 verbose parsed url { protocol: null,
+562 verbose parsed url   slashes: null,
+562 verbose parsed url   auth: null,
+562 verbose parsed url   host: null,
+562 verbose parsed url   port: null,
+562 verbose parsed url   hostname: null,
+562 verbose parsed url   hash: null,
+562 verbose parsed url   search: null,
+562 verbose parsed url   query: null,
+562 verbose parsed url   pathname: '0.4.x',
+562 verbose parsed url   path: '0.4.x',
+562 verbose parsed url   href: '0.4.x' }
+563 verbose addNamed [ 'optimist', '0.4.x' ]
+564 verbose addNamed [ null, '>=0.4.0-0 <0.5.0-0' ]
+565 silly lockFile 7f5756df-optimist-0-4-x optimist@0.4.x
+566 verbose lock optimist@0.4.x /home/clement/.npm/7f5756df-optimist-0-4-x.lock
+567 silly addNameRange { name: 'connect', range: '>=2.7.0-0 <2.8.0-0', hasData: false }
+568 verbose cache add [ 'phantomizer-websupport@http://github.com/maboiteaspam/phantomizer-websupport.git',
+568 verbose cache add   null ]
+569 verbose cache add name=undefined spec="phantomizer-websupport@http://github.com/maboiteaspam/phantomizer-websupport.git" args=["phantomizer-websupport@http://github.com/maboiteaspam/phantomizer-websupport.git",null]
+570 verbose parsed url { protocol: null,
+570 verbose parsed url   slashes: null,
+570 verbose parsed url   auth: null,
+570 verbose parsed url   host: null,
+570 verbose parsed url   port: null,
+570 verbose parsed url   hostname: null,
+570 verbose parsed url   hash: null,
+570 verbose parsed url   search: null,
+570 verbose parsed url   query: null,
+570 verbose parsed url   pathname: 'phantomizer-websupport@http://github.com/maboiteaspam/phantomizer-websupport.git',
+570 verbose parsed url   path: 'phantomizer-websupport@http://github.com/maboiteaspam/phantomizer-websupport.git',
+570 verbose parsed url   href: 'phantomizer-websupport@http://github.com/maboiteaspam/phantomizer-websupport.git' }
+571 verbose cache add name="phantomizer-websupport" spec="http://github.com/maboiteaspam/phantomizer-websupport.git" args=["phantomizer-websupport","http://github.com/maboiteaspam/phantomizer-websupport.git"]
+572 verbose parsed url { protocol: 'http:',
+572 verbose parsed url   slashes: true,
+572 verbose parsed url   auth: null,
+572 verbose parsed url   host: 'github.com',
+572 verbose parsed url   port: null,
+572 verbose parsed url   hostname: 'github.com',
+572 verbose parsed url   hash: null,
+572 verbose parsed url   search: null,
+572 verbose parsed url   query: null,
+572 verbose parsed url   pathname: '/maboiteaspam/phantomizer-websupport.git',
+572 verbose parsed url   path: '/maboiteaspam/phantomizer-websupport.git',
+572 verbose parsed url   href: 'http://github.com/maboiteaspam/phantomizer-websupport.git' }
+573 silly lockFile 7534d592-aspam-phantomizer-websupport-git http://github.com/maboiteaspam/phantomizer-websupport.git
+574 verbose lock http://github.com/maboiteaspam/phantomizer-websupport.git /home/clement/.npm/7534d592-aspam-phantomizer-websupport-git.lock
+575 silly addNameRange { name: 'lodash', range: '>=0.9.0-0 <0.10.0-0', hasData: false }
+576 silly addNameRange { name: 'optimist', range: '>=0.4.0-0 <0.5.0-0', hasData: false }
+577 verbose cache add [ 'phantomizer-libutil@http://github.com/maboiteaspam/phantomizer-libutil.git',
+577 verbose cache add   null ]
+578 verbose cache add name=undefined spec="phantomizer-libutil@http://github.com/maboiteaspam/phantomizer-libutil.git" args=["phantomizer-libutil@http://github.com/maboiteaspam/phantomizer-libutil.git",null]
+579 verbose parsed url { protocol: null,
+579 verbose parsed url   slashes: null,
+579 verbose parsed url   auth: null,
+579 verbose parsed url   host: null,
+579 verbose parsed url   port: null,
+579 verbose parsed url   hostname: null,
+579 verbose parsed url   hash: null,
+579 verbose parsed url   search: null,
+579 verbose parsed url   query: null,
+579 verbose parsed url   pathname: 'phantomizer-libutil@http://github.com/maboiteaspam/phantomizer-libutil.git',
+579 verbose parsed url   path: 'phantomizer-libutil@http://github.com/maboiteaspam/phantomizer-libutil.git',
+579 verbose parsed url   href: 'phantomizer-libutil@http://github.com/maboiteaspam/phantomizer-libutil.git' }
+580 verbose cache add name="phantomizer-libutil" spec="http://github.com/maboiteaspam/phantomizer-libutil.git" args=["phantomizer-libutil","http://github.com/maboiteaspam/phantomizer-libutil.git"]
+581 verbose parsed url { protocol: 'http:',
+581 verbose parsed url   slashes: true,
+581 verbose parsed url   auth: null,
+581 verbose parsed url   host: 'github.com',
+581 verbose parsed url   port: null,
+581 verbose parsed url   hostname: 'github.com',
+581 verbose parsed url   hash: null,
+581 verbose parsed url   search: null,
+581 verbose parsed url   query: null,
+581 verbose parsed url   pathname: '/maboiteaspam/phantomizer-libutil.git',
+581 verbose parsed url   path: '/maboiteaspam/phantomizer-libutil.git',
+581 verbose parsed url   href: 'http://github.com/maboiteaspam/phantomizer-libutil.git' }
+582 silly lockFile f007d43d-iteaspam-phantomizer-libutil-git http://github.com/maboiteaspam/phantomizer-libutil.git
+583 verbose lock http://github.com/maboiteaspam/phantomizer-libutil.git /home/clement/.npm/f007d43d-iteaspam-phantomizer-libutil-git.lock
+584 verbose addRemoteTarball [ 'http://github.com/maboiteaspam/phantomizer-websupport.git',
+584 verbose addRemoteTarball   null ]
+585 info retry fetch attempt 1 at 15:35:07
+586 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/tmp.tgz
+587 verbose cache add [ 'phantomizer-grunt@http://github.com/maboiteaspam/phantomizer-grunt.git',
+587 verbose cache add   null ]
+588 verbose cache add name=undefined spec="phantomizer-grunt@http://github.com/maboiteaspam/phantomizer-grunt.git" args=["phantomizer-grunt@http://github.com/maboiteaspam/phantomizer-grunt.git",null]
+589 verbose parsed url { protocol: null,
+589 verbose parsed url   slashes: null,
+589 verbose parsed url   auth: null,
+589 verbose parsed url   host: null,
+589 verbose parsed url   port: null,
+589 verbose parsed url   hostname: null,
+589 verbose parsed url   hash: null,
+589 verbose parsed url   search: null,
+589 verbose parsed url   query: null,
+589 verbose parsed url   pathname: 'phantomizer-grunt@http://github.com/maboiteaspam/phantomizer-grunt.git',
+589 verbose parsed url   path: 'phantomizer-grunt@http://github.com/maboiteaspam/phantomizer-grunt.git',
+589 verbose parsed url   href: 'phantomizer-grunt@http://github.com/maboiteaspam/phantomizer-grunt.git' }
+590 verbose cache add name="phantomizer-grunt" spec="http://github.com/maboiteaspam/phantomizer-grunt.git" args=["phantomizer-grunt","http://github.com/maboiteaspam/phantomizer-grunt.git"]
+591 verbose parsed url { protocol: 'http:',
+591 verbose parsed url   slashes: true,
+591 verbose parsed url   auth: null,
+591 verbose parsed url   host: 'github.com',
+591 verbose parsed url   port: null,
+591 verbose parsed url   hostname: 'github.com',
+591 verbose parsed url   hash: null,
+591 verbose parsed url   search: null,
+591 verbose parsed url   query: null,
+591 verbose parsed url   pathname: '/maboiteaspam/phantomizer-grunt.git',
+591 verbose parsed url   path: '/maboiteaspam/phantomizer-grunt.git',
+591 verbose parsed url   href: 'http://github.com/maboiteaspam/phantomizer-grunt.git' }
+592 silly lockFile 224659cf-boiteaspam-phantomizer-grunt-git http://github.com/maboiteaspam/phantomizer-grunt.git
+593 verbose lock http://github.com/maboiteaspam/phantomizer-grunt.git /home/clement/.npm/224659cf-boiteaspam-phantomizer-grunt-git.lock
+594 verbose addRemoteTarball [ 'http://github.com/maboiteaspam/phantomizer-libutil.git',
+594 verbose addRemoteTarball   null ]
+595 info retry fetch attempt 1 at 15:35:07
+596 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576107174-0.3765447707846761/tmp.tgz
+597 verbose url raw connect
+598 verbose url resolving [ 'https://registry.npmjs.org/', './connect' ]
+599 verbose url resolved https://registry.npmjs.org/connect
+600 info trying registry request attempt 1 at 15:35:07
+601 verbose etag "BMYU0F59PKAU2TU809X3GINQK"
+602 http GET https://registry.npmjs.org/connect
+603 http GET http://github.com/maboiteaspam/phantomizer-websupport.git
+604 verbose url raw lodash
+605 verbose url resolving [ 'https://registry.npmjs.org/', './lodash' ]
+606 verbose url resolved https://registry.npmjs.org/lodash
+607 info trying registry request attempt 1 at 15:35:07
+608 verbose etag "1MWPQ14ETWZB2VV0XZ286YM5V"
+609 http GET https://registry.npmjs.org/lodash
+610 verbose cache add [ 'phantomizer-docco@http://github.com/maboiteaspam/phantomizer-docco.git',
+610 verbose cache add   null ]
+611 verbose cache add name=undefined spec="phantomizer-docco@http://github.com/maboiteaspam/phantomizer-docco.git" args=["phantomizer-docco@http://github.com/maboiteaspam/phantomizer-docco.git",null]
+612 verbose parsed url { protocol: null,
+612 verbose parsed url   slashes: null,
+612 verbose parsed url   auth: null,
+612 verbose parsed url   host: null,
+612 verbose parsed url   port: null,
+612 verbose parsed url   hostname: null,
+612 verbose parsed url   hash: null,
+612 verbose parsed url   search: null,
+612 verbose parsed url   query: null,
+612 verbose parsed url   pathname: 'phantomizer-docco@http://github.com/maboiteaspam/phantomizer-docco.git',
+612 verbose parsed url   path: 'phantomizer-docco@http://github.com/maboiteaspam/phantomizer-docco.git',
+612 verbose parsed url   href: 'phantomizer-docco@http://github.com/maboiteaspam/phantomizer-docco.git' }
+613 verbose cache add name="phantomizer-docco" spec="http://github.com/maboiteaspam/phantomizer-docco.git" args=["phantomizer-docco","http://github.com/maboiteaspam/phantomizer-docco.git"]
+614 verbose parsed url { protocol: 'http:',
+614 verbose parsed url   slashes: true,
+614 verbose parsed url   auth: null,
+614 verbose parsed url   host: 'github.com',
+614 verbose parsed url   port: null,
+614 verbose parsed url   hostname: 'github.com',
+614 verbose parsed url   hash: null,
+614 verbose parsed url   search: null,
+614 verbose parsed url   query: null,
+614 verbose parsed url   pathname: '/maboiteaspam/phantomizer-docco.git',
+614 verbose parsed url   path: '/maboiteaspam/phantomizer-docco.git',
+614 verbose parsed url   href: 'http://github.com/maboiteaspam/phantomizer-docco.git' }
+615 silly lockFile 42bf7140-boiteaspam-phantomizer-docco-git http://github.com/maboiteaspam/phantomizer-docco.git
+616 verbose lock http://github.com/maboiteaspam/phantomizer-docco.git /home/clement/.npm/42bf7140-boiteaspam-phantomizer-docco-git.lock
+617 verbose cache add [ 'phantomizer-styledocco@http://github.com/maboiteaspam/phantomizer-styledocco.git',
+617 verbose cache add   null ]
+618 verbose cache add name=undefined spec="phantomizer-styledocco@http://github.com/maboiteaspam/phantomizer-styledocco.git" args=["phantomizer-styledocco@http://github.com/maboiteaspam/phantomizer-styledocco.git",null]
+619 verbose parsed url { protocol: null,
+619 verbose parsed url   slashes: null,
+619 verbose parsed url   auth: null,
+619 verbose parsed url   host: null,
+619 verbose parsed url   port: null,
+619 verbose parsed url   hostname: null,
+619 verbose parsed url   hash: null,
+619 verbose parsed url   search: null,
+619 verbose parsed url   query: null,
+619 verbose parsed url   pathname: 'phantomizer-styledocco@http://github.com/maboiteaspam/phantomizer-styledocco.git',
+619 verbose parsed url   path: 'phantomizer-styledocco@http://github.com/maboiteaspam/phantomizer-styledocco.git',
+619 verbose parsed url   href: 'phantomizer-styledocco@http://github.com/maboiteaspam/phantomizer-styledocco.git' }
+620 verbose cache add name="phantomizer-styledocco" spec="http://github.com/maboiteaspam/phantomizer-styledocco.git" args=["phantomizer-styledocco","http://github.com/maboiteaspam/phantomizer-styledocco.git"]
+621 verbose parsed url { protocol: 'http:',
+621 verbose parsed url   slashes: true,
+621 verbose parsed url   auth: null,
+621 verbose parsed url   host: 'github.com',
+621 verbose parsed url   port: null,
+621 verbose parsed url   hostname: 'github.com',
+621 verbose parsed url   hash: null,
+621 verbose parsed url   search: null,
+621 verbose parsed url   query: null,
+621 verbose parsed url   pathname: '/maboiteaspam/phantomizer-styledocco.git',
+621 verbose parsed url   path: '/maboiteaspam/phantomizer-styledocco.git',
+621 verbose parsed url   href: 'http://github.com/maboiteaspam/phantomizer-styledocco.git' }
+622 silly lockFile 9e50c19b-aspam-phantomizer-styledocco-git http://github.com/maboiteaspam/phantomizer-styledocco.git
+623 verbose lock http://github.com/maboiteaspam/phantomizer-styledocco.git /home/clement/.npm/9e50c19b-aspam-phantomizer-styledocco-git.lock
+624 verbose cache add [ 'phantomizer-html-builder@http://github.com/maboiteaspam/phantomizer-html-builder.git',
+624 verbose cache add   null ]
+625 verbose cache add name=undefined spec="phantomizer-html-builder@http://github.com/maboiteaspam/phantomizer-html-builder.git" args=["phantomizer-html-builder@http://github.com/maboiteaspam/phantomizer-html-builder.git",null]
+626 verbose parsed url { protocol: null,
+626 verbose parsed url   slashes: null,
+626 verbose parsed url   auth: null,
+626 verbose parsed url   host: null,
+626 verbose parsed url   port: null,
+626 verbose parsed url   hostname: null,
+626 verbose parsed url   hash: null,
+626 verbose parsed url   search: null,
+626 verbose parsed url   query: null,
+626 verbose parsed url   pathname: 'phantomizer-html-builder@http://github.com/maboiteaspam/phantomizer-html-builder.git',
+626 verbose parsed url   path: 'phantomizer-html-builder@http://github.com/maboiteaspam/phantomizer-html-builder.git',
+626 verbose parsed url   href: 'phantomizer-html-builder@http://github.com/maboiteaspam/phantomizer-html-builder.git' }
+627 verbose cache add name="phantomizer-html-builder" spec="http://github.com/maboiteaspam/phantomizer-html-builder.git" args=["phantomizer-html-builder","http://github.com/maboiteaspam/phantomizer-html-builder.git"]
+628 verbose parsed url { protocol: 'http:',
+628 verbose parsed url   slashes: true,
+628 verbose parsed url   auth: null,
+628 verbose parsed url   host: 'github.com',
+628 verbose parsed url   port: null,
+628 verbose parsed url   hostname: 'github.com',
+628 verbose parsed url   hash: null,
+628 verbose parsed url   search: null,
+628 verbose parsed url   query: null,
+628 verbose parsed url   pathname: '/maboiteaspam/phantomizer-html-builder.git',
+628 verbose parsed url   path: '/maboiteaspam/phantomizer-html-builder.git',
+628 verbose parsed url   href: 'http://github.com/maboiteaspam/phantomizer-html-builder.git' }
+629 silly lockFile 0d465dc6-pam-phantomizer-html-builder-git http://github.com/maboiteaspam/phantomizer-html-builder.git
+630 verbose lock http://github.com/maboiteaspam/phantomizer-html-builder.git /home/clement/.npm/0d465dc6-pam-phantomizer-html-builder-git.lock
+631 verbose cache add [ 'phantomizer-export-build@http://github.com/maboiteaspam/phantomizer-export-build.git',
+631 verbose cache add   null ]
+632 verbose cache add name=undefined spec="phantomizer-export-build@http://github.com/maboiteaspam/phantomizer-export-build.git" args=["phantomizer-export-build@http://github.com/maboiteaspam/phantomizer-export-build.git",null]
+633 verbose parsed url { protocol: null,
+633 verbose parsed url   slashes: null,
+633 verbose parsed url   auth: null,
+633 verbose parsed url   host: null,
+633 verbose parsed url   port: null,
+633 verbose parsed url   hostname: null,
+633 verbose parsed url   hash: null,
+633 verbose parsed url   search: null,
+633 verbose parsed url   query: null,
+633 verbose parsed url   pathname: 'phantomizer-export-build@http://github.com/maboiteaspam/phantomizer-export-build.git',
+633 verbose parsed url   path: 'phantomizer-export-build@http://github.com/maboiteaspam/phantomizer-export-build.git',
+633 verbose parsed url   href: 'phantomizer-export-build@http://github.com/maboiteaspam/phantomizer-export-build.git' }
+634 verbose cache add name="phantomizer-export-build" spec="http://github.com/maboiteaspam/phantomizer-export-build.git" args=["phantomizer-export-build","http://github.com/maboiteaspam/phantomizer-export-build.git"]
+635 verbose parsed url { protocol: 'http:',
+635 verbose parsed url   slashes: true,
+635 verbose parsed url   auth: null,
+635 verbose parsed url   host: 'github.com',
+635 verbose parsed url   port: null,
+635 verbose parsed url   hostname: 'github.com',
+635 verbose parsed url   hash: null,
+635 verbose parsed url   search: null,
+635 verbose parsed url   query: null,
+635 verbose parsed url   pathname: '/maboiteaspam/phantomizer-export-build.git',
+635 verbose parsed url   path: '/maboiteaspam/phantomizer-export-build.git',
+635 verbose parsed url   href: 'http://github.com/maboiteaspam/phantomizer-export-build.git' }
+636 silly lockFile 146c03c4-pam-phantomizer-export-build-git http://github.com/maboiteaspam/phantomizer-export-build.git
+637 verbose lock http://github.com/maboiteaspam/phantomizer-export-build.git /home/clement/.npm/146c03c4-pam-phantomizer-export-build-git.lock
+638 verbose addRemoteTarball [ 'http://github.com/maboiteaspam/phantomizer-grunt.git', null ]
+639 verbose url raw optimist
+640 verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+641 verbose url resolved https://registry.npmjs.org/optimist
+642 info trying registry request attempt 1 at 15:35:07
+643 verbose etag "9V7RLH3E16P65K4JANNCBA1L9"
+644 http GET https://registry.npmjs.org/optimist
+645 info retry fetch attempt 1 at 15:35:07
+646 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576107175-0.024136422434821725/tmp.tgz
+647 http GET http://github.com/maboiteaspam/phantomizer-libutil.git
+648 verbose addRemoteTarball [ 'http://github.com/maboiteaspam/phantomizer-docco.git', null ]
+649 verbose addRemoteTarball [ 'http://github.com/maboiteaspam/phantomizer-styledocco.git',
+649 verbose addRemoteTarball   null ]
+650 verbose addRemoteTarball [ 'http://github.com/maboiteaspam/phantomizer-html-builder.git',
+650 verbose addRemoteTarball   null ]
+651 verbose addRemoteTarball [ 'http://github.com/maboiteaspam/phantomizer-export-build.git',
+651 verbose addRemoteTarball   null ]
+652 info retry fetch attempt 1 at 15:35:07
+653 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576107200-0.36788448761217296/tmp.tgz
+654 info retry fetch attempt 1 at 15:35:07
+655 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576107200-0.4330813179258257/tmp.tgz
+656 info retry fetch attempt 1 at 15:35:07
+657 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576107205-0.6644113955553621/tmp.tgz
+658 info retry fetch attempt 1 at 15:35:07
+659 verbose fetch to= /home/clement/tmp/npm-1655-HbYFF4o4/1379576107206-0.750691267894581/tmp.tgz
+660 http GET http://github.com/maboiteaspam/phantomizer-grunt.git
+661 http GET http://github.com/maboiteaspam/phantomizer-docco.git
+662 http GET http://github.com/maboiteaspam/phantomizer-styledocco.git
+663 http GET http://github.com/maboiteaspam/phantomizer-html-builder.git
+664 http GET http://github.com/maboiteaspam/phantomizer-export-build.git
+665 silly lockFile 262d0fd1-node-modules-grunt-contrib-qunit tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt-contrib-qunit
+666 silly lockFile 262d0fd1-node-modules-grunt-contrib-qunit tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt-contrib-qunit
+667 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+668 silly lockFile 061546ca--contrib-qunit-0-2-2-package-tgz tar:///home/clement/.npm/grunt-contrib-qunit/0.2.2/package.tgz
+669 info preinstall grunt-contrib-qunit@0.2.2
+670 verbose readDependencies using package.json deps
+671 verbose readDependencies using package.json deps
+672 verbose cache add [ 'grunt-lib-phantomjs@~0.3.0', null ]
+673 verbose cache add name=undefined spec="grunt-lib-phantomjs@~0.3.0" args=["grunt-lib-phantomjs@~0.3.0",null]
+674 verbose parsed url { protocol: null,
+674 verbose parsed url   slashes: null,
+674 verbose parsed url   auth: null,
+674 verbose parsed url   host: null,
+674 verbose parsed url   port: null,
+674 verbose parsed url   hostname: null,
+674 verbose parsed url   hash: null,
+674 verbose parsed url   search: null,
+674 verbose parsed url   query: null,
+674 verbose parsed url   pathname: 'grunt-lib-phantomjs@~0.3.0',
+674 verbose parsed url   path: 'grunt-lib-phantomjs@~0.3.0',
+674 verbose parsed url   href: 'grunt-lib-phantomjs@~0.3.0' }
+675 verbose cache add name="grunt-lib-phantomjs" spec="~0.3.0" args=["grunt-lib-phantomjs","~0.3.0"]
+676 verbose parsed url { protocol: null,
+676 verbose parsed url   slashes: null,
+676 verbose parsed url   auth: null,
+676 verbose parsed url   host: null,
+676 verbose parsed url   port: null,
+676 verbose parsed url   hostname: null,
+676 verbose parsed url   hash: null,
+676 verbose parsed url   search: null,
+676 verbose parsed url   query: null,
+676 verbose parsed url   pathname: '~0.3.0',
+676 verbose parsed url   path: '~0.3.0',
+676 verbose parsed url   href: '~0.3.0' }
+677 verbose addNamed [ 'grunt-lib-phantomjs', '~0.3.0' ]
+678 verbose addNamed [ null, '>=0.3.0-0 <0.4.0-0' ]
+679 silly lockFile 47903b71-grunt-lib-phantomjs-0-3-0 grunt-lib-phantomjs@~0.3.0
+680 verbose lock grunt-lib-phantomjs@~0.3.0 /home/clement/.npm/47903b71-grunt-lib-phantomjs-0-3-0.lock
+681 silly addNameRange { name: 'grunt-lib-phantomjs',
+681 silly addNameRange   range: '>=0.3.0-0 <0.4.0-0',
+681 silly addNameRange   hasData: false }
+682 verbose url raw grunt-lib-phantomjs
+683 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-lib-phantomjs' ]
+684 verbose url resolved https://registry.npmjs.org/grunt-lib-phantomjs
+685 info trying registry request attempt 1 at 15:35:07
+686 http GET https://registry.npmjs.org/grunt-lib-phantomjs
+687 silly lockFile 9e535979--qunit-runner-node-modules-grunt tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt
+688 silly lockFile 9e535979--qunit-runner-node-modules-grunt tar:///home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/grunt
+689 silly lockFile 4699d84b-ment-npm-grunt-0-4-1-package-tgz tar:///home/clement/.npm/grunt/0.4.1/package.tgz
+690 silly lockFile 4699d84b-ment-npm-grunt-0-4-1-package-tgz tar:///home/clement/.npm/grunt/0.4.1/package.tgz
+691 info preinstall grunt@0.4.1
+692 verbose readDependencies using package.json deps
+693 verbose readDependencies using package.json deps
+694 verbose cache add [ 'async@~0.1.22', null ]
+695 verbose cache add name=undefined spec="async@~0.1.22" args=["async@~0.1.22",null]
+696 verbose parsed url { protocol: null,
+696 verbose parsed url   slashes: null,
+696 verbose parsed url   auth: null,
+696 verbose parsed url   host: null,
+696 verbose parsed url   port: null,
+696 verbose parsed url   hostname: null,
+696 verbose parsed url   hash: null,
+696 verbose parsed url   search: null,
+696 verbose parsed url   query: null,
+696 verbose parsed url   pathname: 'async@~0.1.22',
+696 verbose parsed url   path: 'async@~0.1.22',
+696 verbose parsed url   href: 'async@~0.1.22' }
+697 verbose cache add name="async" spec="~0.1.22" args=["async","~0.1.22"]
+698 verbose parsed url { protocol: null,
+698 verbose parsed url   slashes: null,
+698 verbose parsed url   auth: null,
+698 verbose parsed url   host: null,
+698 verbose parsed url   port: null,
+698 verbose parsed url   hostname: null,
+698 verbose parsed url   hash: null,
+698 verbose parsed url   search: null,
+698 verbose parsed url   query: null,
+698 verbose parsed url   pathname: '~0.1.22',
+698 verbose parsed url   path: '~0.1.22',
+698 verbose parsed url   href: '~0.1.22' }
+699 verbose addNamed [ 'async', '~0.1.22' ]
+700 verbose addNamed [ null, '>=0.1.22-0 <0.2.0-0' ]
+701 silly lockFile 3af71045-async-0-1-22 async@~0.1.22
+702 verbose lock async@~0.1.22 /home/clement/.npm/3af71045-async-0-1-22.lock
+703 verbose cache add [ 'coffee-script@~1.3.3', null ]
+704 verbose cache add name=undefined spec="coffee-script@~1.3.3" args=["coffee-script@~1.3.3",null]
+705 verbose parsed url { protocol: null,
+705 verbose parsed url   slashes: null,
+705 verbose parsed url   auth: null,
+705 verbose parsed url   host: null,
+705 verbose parsed url   port: null,
+705 verbose parsed url   hostname: null,
+705 verbose parsed url   hash: null,
+705 verbose parsed url   search: null,
+705 verbose parsed url   query: null,
+705 verbose parsed url   pathname: 'coffee-script@~1.3.3',
+705 verbose parsed url   path: 'coffee-script@~1.3.3',
+705 verbose parsed url   href: 'coffee-script@~1.3.3' }
+706 verbose cache add name="coffee-script" spec="~1.3.3" args=["coffee-script","~1.3.3"]
+707 verbose parsed url { protocol: null,
+707 verbose parsed url   slashes: null,
+707 verbose parsed url   auth: null,
+707 verbose parsed url   host: null,
+707 verbose parsed url   port: null,
+707 verbose parsed url   hostname: null,
+707 verbose parsed url   hash: null,
+707 verbose parsed url   search: null,
+707 verbose parsed url   query: null,
+707 verbose parsed url   pathname: '~1.3.3',
+707 verbose parsed url   path: '~1.3.3',
+707 verbose parsed url   href: '~1.3.3' }
+708 verbose addNamed [ 'coffee-script', '~1.3.3' ]
+709 verbose addNamed [ null, '>=1.3.3-0 <1.4.0-0' ]
+710 silly lockFile f72bb580-coffee-script-1-3-3 coffee-script@~1.3.3
+711 verbose lock coffee-script@~1.3.3 /home/clement/.npm/f72bb580-coffee-script-1-3-3.lock
+712 verbose cache add [ 'colors@~0.6.0-1', null ]
+713 verbose cache add name=undefined spec="colors@~0.6.0-1" args=["colors@~0.6.0-1",null]
+714 verbose parsed url { protocol: null,
+714 verbose parsed url   slashes: null,
+714 verbose parsed url   auth: null,
+714 verbose parsed url   host: null,
+714 verbose parsed url   port: null,
+714 verbose parsed url   hostname: null,
+714 verbose parsed url   hash: null,
+714 verbose parsed url   search: null,
+714 verbose parsed url   query: null,
+714 verbose parsed url   pathname: 'colors@~0.6.0-1',
+714 verbose parsed url   path: 'colors@~0.6.0-1',
+714 verbose parsed url   href: 'colors@~0.6.0-1' }
+715 verbose cache add name="colors" spec="~0.6.0-1" args=["colors","~0.6.0-1"]
+716 verbose parsed url { protocol: null,
+716 verbose parsed url   slashes: null,
+716 verbose parsed url   auth: null,
+716 verbose parsed url   host: null,
+716 verbose parsed url   port: null,
+716 verbose parsed url   hostname: null,
+716 verbose parsed url   hash: null,
+716 verbose parsed url   search: null,
+716 verbose parsed url   query: null,
+716 verbose parsed url   pathname: '~0.6.0-1',
+716 verbose parsed url   path: '~0.6.0-1',
+716 verbose parsed url   href: '~0.6.0-1' }
+717 verbose addNamed [ 'colors', '~0.6.0-1' ]
+718 verbose addNamed [ null, '>=0.6.0-1 <0.7.0-0' ]
+719 silly lockFile f29bff6b-colors-0-6-0-1 colors@~0.6.0-1
+720 verbose lock colors@~0.6.0-1 /home/clement/.npm/f29bff6b-colors-0-6-0-1.lock
+721 silly addNameRange { name: 'async', range: '>=0.1.22-0 <0.2.0-0', hasData: false }
+722 silly addNameRange { name: 'coffee-script',
+722 silly addNameRange   range: '>=1.3.3-0 <1.4.0-0',
+722 silly addNameRange   hasData: false }
+723 silly addNameRange { name: 'colors', range: '>=0.6.0-1 <0.7.0-0', hasData: false }
+724 verbose cache add [ 'dateformat@1.0.2-1.2.3', null ]
+725 verbose cache add name=undefined spec="dateformat@1.0.2-1.2.3" args=["dateformat@1.0.2-1.2.3",null]
+726 verbose parsed url { protocol: null,
+726 verbose parsed url   slashes: null,
+726 verbose parsed url   auth: null,
+726 verbose parsed url   host: null,
+726 verbose parsed url   port: null,
+726 verbose parsed url   hostname: null,
+726 verbose parsed url   hash: null,
+726 verbose parsed url   search: null,
+726 verbose parsed url   query: null,
+726 verbose parsed url   pathname: 'dateformat@1.0.2-1.2.3',
+726 verbose parsed url   path: 'dateformat@1.0.2-1.2.3',
+726 verbose parsed url   href: 'dateformat@1.0.2-1.2.3' }
+727 verbose cache add name="dateformat" spec="1.0.2-1.2.3" args=["dateformat","1.0.2-1.2.3"]
+728 verbose parsed url { protocol: null,
+728 verbose parsed url   slashes: null,
+728 verbose parsed url   auth: null,
+728 verbose parsed url   host: null,
+728 verbose parsed url   port: null,
+728 verbose parsed url   hostname: null,
+728 verbose parsed url   hash: null,
+728 verbose parsed url   search: null,
+728 verbose parsed url   query: null,
+728 verbose parsed url   pathname: '1.0.2-1.2.3',
+728 verbose parsed url   path: '1.0.2-1.2.3',
+728 verbose parsed url   href: '1.0.2-1.2.3' }
+729 verbose addNamed [ 'dateformat', '1.0.2-1.2.3' ]
+730 verbose addNamed [ '1.0.2-1.2.3', '1.0.2-1.2.3' ]
+731 silly lockFile 644d6e27-dateformat-1-0-2-1-2-3 dateformat@1.0.2-1.2.3
+732 verbose lock dateformat@1.0.2-1.2.3 /home/clement/.npm/644d6e27-dateformat-1-0-2-1-2-3.lock
+733 verbose cache add [ 'eventemitter2@~0.4.9', null ]
+734 verbose cache add name=undefined spec="eventemitter2@~0.4.9" args=["eventemitter2@~0.4.9",null]
+735 verbose parsed url { protocol: null,
+735 verbose parsed url   slashes: null,
+735 verbose parsed url   auth: null,
+735 verbose parsed url   host: null,
+735 verbose parsed url   port: null,
+735 verbose parsed url   hostname: null,
+735 verbose parsed url   hash: null,
+735 verbose parsed url   search: null,
+735 verbose parsed url   query: null,
+735 verbose parsed url   pathname: 'eventemitter2@~0.4.9',
+735 verbose parsed url   path: 'eventemitter2@~0.4.9',
+735 verbose parsed url   href: 'eventemitter2@~0.4.9' }
+736 verbose cache add name="eventemitter2" spec="~0.4.9" args=["eventemitter2","~0.4.9"]
+737 verbose parsed url { protocol: null,
+737 verbose parsed url   slashes: null,
+737 verbose parsed url   auth: null,
+737 verbose parsed url   host: null,
+737 verbose parsed url   port: null,
+737 verbose parsed url   hostname: null,
+737 verbose parsed url   hash: null,
+737 verbose parsed url   search: null,
+737 verbose parsed url   query: null,
+737 verbose parsed url   pathname: '~0.4.9',
+737 verbose parsed url   path: '~0.4.9',
+737 verbose parsed url   href: '~0.4.9' }
+738 verbose addNamed [ 'eventemitter2', '~0.4.9' ]
+739 verbose addNamed [ null, '>=0.4.9-0 <0.5.0-0' ]
+740 silly lockFile 70573e74-eventemitter2-0-4-9 eventemitter2@~0.4.9
+741 verbose lock eventemitter2@~0.4.9 /home/clement/.npm/70573e74-eventemitter2-0-4-9.lock
+742 verbose url raw async
+743 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+744 verbose url resolved https://registry.npmjs.org/async
+745 info trying registry request attempt 1 at 15:35:07
+746 verbose etag "3IS5E1BD2LBAXB1ODZSX9E310"
+747 http GET https://registry.npmjs.org/async
+748 verbose cache add [ 'glob@~3.1.21', null ]
+749 verbose cache add name=undefined spec="glob@~3.1.21" args=["glob@~3.1.21",null]
+750 verbose parsed url { protocol: null,
+750 verbose parsed url   slashes: null,
+750 verbose parsed url   auth: null,
+750 verbose parsed url   host: null,
+750 verbose parsed url   port: null,
+750 verbose parsed url   hostname: null,
+750 verbose parsed url   hash: null,
+750 verbose parsed url   search: null,
+750 verbose parsed url   query: null,
+750 verbose parsed url   pathname: 'glob@~3.1.21',
+750 verbose parsed url   path: 'glob@~3.1.21',
+750 verbose parsed url   href: 'glob@~3.1.21' }
+751 verbose cache add name="glob" spec="~3.1.21" args=["glob","~3.1.21"]
+752 verbose parsed url { protocol: null,
+752 verbose parsed url   slashes: null,
+752 verbose parsed url   auth: null,
+752 verbose parsed url   host: null,
+752 verbose parsed url   port: null,
+752 verbose parsed url   hostname: null,
+752 verbose parsed url   hash: null,
+752 verbose parsed url   search: null,
+752 verbose parsed url   query: null,
+752 verbose parsed url   pathname: '~3.1.21',
+752 verbose parsed url   path: '~3.1.21',
+752 verbose parsed url   href: '~3.1.21' }
+753 verbose addNamed [ 'glob', '~3.1.21' ]
+754 verbose addNamed [ null, '>=3.1.21-0 <3.2.0-0' ]
+755 silly lockFile b5074ddc-glob-3-1-21 glob@~3.1.21
+756 verbose lock glob@~3.1.21 /home/clement/.npm/b5074ddc-glob-3-1-21.lock
+757 verbose cache add [ 'findup-sync@~0.1.0', null ]
+758 verbose cache add name=undefined spec="findup-sync@~0.1.0" args=["findup-sync@~0.1.0",null]
+759 verbose parsed url { protocol: null,
+759 verbose parsed url   slashes: null,
+759 verbose parsed url   auth: null,
+759 verbose parsed url   host: null,
+759 verbose parsed url   port: null,
+759 verbose parsed url   hostname: null,
+759 verbose parsed url   hash: null,
+759 verbose parsed url   search: null,
+759 verbose parsed url   query: null,
+759 verbose parsed url   pathname: 'findup-sync@~0.1.0',
+759 verbose parsed url   path: 'findup-sync@~0.1.0',
+759 verbose parsed url   href: 'findup-sync@~0.1.0' }
+760 verbose cache add name="findup-sync" spec="~0.1.0" args=["findup-sync","~0.1.0"]
+761 verbose parsed url { protocol: null,
+761 verbose parsed url   slashes: null,
+761 verbose parsed url   auth: null,
+761 verbose parsed url   host: null,
+761 verbose parsed url   port: null,
+761 verbose parsed url   hostname: null,
+761 verbose parsed url   hash: null,
+761 verbose parsed url   search: null,
+761 verbose parsed url   query: null,
+761 verbose parsed url   pathname: '~0.1.0',
+761 verbose parsed url   path: '~0.1.0',
+761 verbose parsed url   href: '~0.1.0' }
+762 verbose addNamed [ 'findup-sync', '~0.1.0' ]
+763 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+764 silly lockFile 625605b9-findup-sync-0-1-0 findup-sync@~0.1.0
+765 verbose lock findup-sync@~0.1.0 /home/clement/.npm/625605b9-findup-sync-0-1-0.lock
+766 verbose cache add [ 'hooker@~0.2.3', null ]
+767 verbose cache add name=undefined spec="hooker@~0.2.3" args=["hooker@~0.2.3",null]
+768 verbose parsed url { protocol: null,
+768 verbose parsed url   slashes: null,
+768 verbose parsed url   auth: null,
+768 verbose parsed url   host: null,
+768 verbose parsed url   port: null,
+768 verbose parsed url   hostname: null,
+768 verbose parsed url   hash: null,
+768 verbose parsed url   search: null,
+768 verbose parsed url   query: null,
+768 verbose parsed url   pathname: 'hooker@~0.2.3',
+768 verbose parsed url   path: 'hooker@~0.2.3',
+768 verbose parsed url   href: 'hooker@~0.2.3' }
+769 verbose cache add name="hooker" spec="~0.2.3" args=["hooker","~0.2.3"]
+770 verbose parsed url { protocol: null,
+770 verbose parsed url   slashes: null,
+770 verbose parsed url   auth: null,
+770 verbose parsed url   host: null,
+770 verbose parsed url   port: null,
+770 verbose parsed url   hostname: null,
+770 verbose parsed url   hash: null,
+770 verbose parsed url   search: null,
+770 verbose parsed url   query: null,
+770 verbose parsed url   pathname: '~0.2.3',
+770 verbose parsed url   path: '~0.2.3',
+770 verbose parsed url   href: '~0.2.3' }
+771 verbose addNamed [ 'hooker', '~0.2.3' ]
+772 verbose addNamed [ null, '>=0.2.3-0 <0.3.0-0' ]
+773 silly lockFile 2bcd1457-hooker-0-2-3 hooker@~0.2.3
+774 verbose lock hooker@~0.2.3 /home/clement/.npm/2bcd1457-hooker-0-2-3.lock
+775 verbose cache add [ 'iconv-lite@~0.2.5', null ]
+776 verbose cache add name=undefined spec="iconv-lite@~0.2.5" args=["iconv-lite@~0.2.5",null]
+777 verbose parsed url { protocol: null,
+777 verbose parsed url   slashes: null,
+777 verbose parsed url   auth: null,
+777 verbose parsed url   host: null,
+777 verbose parsed url   port: null,
+777 verbose parsed url   hostname: null,
+777 verbose parsed url   hash: null,
+777 verbose parsed url   search: null,
+777 verbose parsed url   query: null,
+777 verbose parsed url   pathname: 'iconv-lite@~0.2.5',
+777 verbose parsed url   path: 'iconv-lite@~0.2.5',
+777 verbose parsed url   href: 'iconv-lite@~0.2.5' }
+778 verbose cache add name="iconv-lite" spec="~0.2.5" args=["iconv-lite","~0.2.5"]
+779 verbose parsed url { protocol: null,
+779 verbose parsed url   slashes: null,
+779 verbose parsed url   auth: null,
+779 verbose parsed url   host: null,
+779 verbose parsed url   port: null,
+779 verbose parsed url   hostname: null,
+779 verbose parsed url   hash: null,
+779 verbose parsed url   search: null,
+779 verbose parsed url   query: null,
+779 verbose parsed url   pathname: '~0.2.5',
+779 verbose parsed url   path: '~0.2.5',
+779 verbose parsed url   href: '~0.2.5' }
+780 verbose addNamed [ 'iconv-lite', '~0.2.5' ]
+781 verbose addNamed [ null, '>=0.2.5-0 <0.3.0-0' ]
+782 silly lockFile ca9efaa1-iconv-lite-0-2-5 iconv-lite@~0.2.5
+783 verbose lock iconv-lite@~0.2.5 /home/clement/.npm/ca9efaa1-iconv-lite-0-2-5.lock
+784 verbose cache add [ 'minimatch@~0.2.6', null ]
+785 verbose cache add name=undefined spec="minimatch@~0.2.6" args=["minimatch@~0.2.6",null]
+786 verbose parsed url { protocol: null,
+786 verbose parsed url   slashes: null,
+786 verbose parsed url   auth: null,
+786 verbose parsed url   host: null,
+786 verbose parsed url   port: null,
+786 verbose parsed url   hostname: null,
+786 verbose parsed url   hash: null,
+786 verbose parsed url   search: null,
+786 verbose parsed url   query: null,
+786 verbose parsed url   pathname: 'minimatch@~0.2.6',
+786 verbose parsed url   path: 'minimatch@~0.2.6',
+786 verbose parsed url   href: 'minimatch@~0.2.6' }
+787 verbose cache add name="minimatch" spec="~0.2.6" args=["minimatch","~0.2.6"]
+788 verbose parsed url { protocol: null,
+788 verbose parsed url   slashes: null,
+788 verbose parsed url   auth: null,
+788 verbose parsed url   host: null,
+788 verbose parsed url   port: null,
+788 verbose parsed url   hostname: null,
+788 verbose parsed url   hash: null,
+788 verbose parsed url   search: null,
+788 verbose parsed url   query: null,
+788 verbose parsed url   pathname: '~0.2.6',
+788 verbose parsed url   path: '~0.2.6',
+788 verbose parsed url   href: '~0.2.6' }
+789 verbose addNamed [ 'minimatch', '~0.2.6' ]
+790 verbose addNamed [ null, '>=0.2.6-0 <0.3.0-0' ]
+791 silly lockFile 5922ee11-minimatch-0-2-6 minimatch@~0.2.6
+792 verbose lock minimatch@~0.2.6 /home/clement/.npm/5922ee11-minimatch-0-2-6.lock
+793 verbose cache add [ 'nopt@~1.0.10', null ]
+794 verbose cache add name=undefined spec="nopt@~1.0.10" args=["nopt@~1.0.10",null]
+795 verbose parsed url { protocol: null,
+795 verbose parsed url   slashes: null,
+795 verbose parsed url   auth: null,
+795 verbose parsed url   host: null,
+795 verbose parsed url   port: null,
+795 verbose parsed url   hostname: null,
+795 verbose parsed url   hash: null,
+795 verbose parsed url   search: null,
+795 verbose parsed url   query: null,
+795 verbose parsed url   pathname: 'nopt@~1.0.10',
+795 verbose parsed url   path: 'nopt@~1.0.10',
+795 verbose parsed url   href: 'nopt@~1.0.10' }
+796 verbose cache add name="nopt" spec="~1.0.10" args=["nopt","~1.0.10"]
+797 verbose parsed url { protocol: null,
+797 verbose parsed url   slashes: null,
+797 verbose parsed url   auth: null,
+797 verbose parsed url   host: null,
+797 verbose parsed url   port: null,
+797 verbose parsed url   hostname: null,
+797 verbose parsed url   hash: null,
+797 verbose parsed url   search: null,
+797 verbose parsed url   query: null,
+797 verbose parsed url   pathname: '~1.0.10',
+797 verbose parsed url   path: '~1.0.10',
+797 verbose parsed url   href: '~1.0.10' }
+798 verbose addNamed [ 'nopt', '~1.0.10' ]
+799 verbose addNamed [ null, '>=1.0.10-0 <1.1.0-0' ]
+800 silly lockFile 79f78dba-nopt-1-0-10 nopt@~1.0.10
+801 verbose lock nopt@~1.0.10 /home/clement/.npm/79f78dba-nopt-1-0-10.lock
+802 verbose cache add [ 'rimraf@~2.0.2', null ]
+803 verbose cache add name=undefined spec="rimraf@~2.0.2" args=["rimraf@~2.0.2",null]
+804 verbose parsed url { protocol: null,
+804 verbose parsed url   slashes: null,
+804 verbose parsed url   auth: null,
+804 verbose parsed url   host: null,
+804 verbose parsed url   port: null,
+804 verbose parsed url   hostname: null,
+804 verbose parsed url   hash: null,
+804 verbose parsed url   search: null,
+804 verbose parsed url   query: null,
+804 verbose parsed url   pathname: 'rimraf@~2.0.2',
+804 verbose parsed url   path: 'rimraf@~2.0.2',
+804 verbose parsed url   href: 'rimraf@~2.0.2' }
+805 verbose cache add name="rimraf" spec="~2.0.2" args=["rimraf","~2.0.2"]
+806 verbose parsed url { protocol: null,
+806 verbose parsed url   slashes: null,
+806 verbose parsed url   auth: null,
+806 verbose parsed url   host: null,
+806 verbose parsed url   port: null,
+806 verbose parsed url   hostname: null,
+806 verbose parsed url   hash: null,
+806 verbose parsed url   search: null,
+806 verbose parsed url   query: null,
+806 verbose parsed url   pathname: '~2.0.2',
+806 verbose parsed url   path: '~2.0.2',
+806 verbose parsed url   href: '~2.0.2' }
+807 verbose addNamed [ 'rimraf', '~2.0.2' ]
+808 verbose addNamed [ null, '>=2.0.2-0 <2.1.0-0' ]
+809 silly lockFile 723423b4-rimraf-2-0-2 rimraf@~2.0.2
+810 verbose lock rimraf@~2.0.2 /home/clement/.npm/723423b4-rimraf-2-0-2.lock
+811 verbose cache add [ 'lodash@~0.9.0', null ]
+812 verbose cache add name=undefined spec="lodash@~0.9.0" args=["lodash@~0.9.0",null]
+813 verbose parsed url { protocol: null,
+813 verbose parsed url   slashes: null,
+813 verbose parsed url   auth: null,
+813 verbose parsed url   host: null,
+813 verbose parsed url   port: null,
+813 verbose parsed url   hostname: null,
+813 verbose parsed url   hash: null,
+813 verbose parsed url   search: null,
+813 verbose parsed url   query: null,
+813 verbose parsed url   pathname: 'lodash@~0.9.0',
+813 verbose parsed url   path: 'lodash@~0.9.0',
+813 verbose parsed url   href: 'lodash@~0.9.0' }
+814 verbose cache add name="lodash" spec="~0.9.0" args=["lodash","~0.9.0"]
+815 verbose parsed url { protocol: null,
+815 verbose parsed url   slashes: null,
+815 verbose parsed url   auth: null,
+815 verbose parsed url   host: null,
+815 verbose parsed url   port: null,
+815 verbose parsed url   hostname: null,
+815 verbose parsed url   hash: null,
+815 verbose parsed url   search: null,
+815 verbose parsed url   query: null,
+815 verbose parsed url   pathname: '~0.9.0',
+815 verbose parsed url   path: '~0.9.0',
+815 verbose parsed url   href: '~0.9.0' }
+816 verbose addNamed [ 'lodash', '~0.9.0' ]
+817 verbose addNamed [ null, '>=0.9.0-0 <0.10.0-0' ]
+818 silly lockFile 429879b8-lodash-0-9-0 lodash@~0.9.0
+819 verbose lock lodash@~0.9.0 /home/clement/.npm/429879b8-lodash-0-9-0.lock
+820 verbose cache add [ 'underscore.string@~2.2.0rc', null ]
+821 verbose cache add name=undefined spec="underscore.string@~2.2.0rc" args=["underscore.string@~2.2.0rc",null]
+822 verbose parsed url { protocol: null,
+822 verbose parsed url   slashes: null,
+822 verbose parsed url   auth: null,
+822 verbose parsed url   host: null,
+822 verbose parsed url   port: null,
+822 verbose parsed url   hostname: null,
+822 verbose parsed url   hash: null,
+822 verbose parsed url   search: null,
+822 verbose parsed url   query: null,
+822 verbose parsed url   pathname: 'underscore.string@~2.2.0rc',
+822 verbose parsed url   path: 'underscore.string@~2.2.0rc',
+822 verbose parsed url   href: 'underscore.string@~2.2.0rc' }
+823 verbose cache add name="underscore.string" spec="~2.2.0rc" args=["underscore.string","~2.2.0rc"]
+824 verbose parsed url { protocol: null,
+824 verbose parsed url   slashes: null,
+824 verbose parsed url   auth: null,
+824 verbose parsed url   host: null,
+824 verbose parsed url   port: null,
+824 verbose parsed url   hostname: null,
+824 verbose parsed url   hash: null,
+824 verbose parsed url   search: null,
+824 verbose parsed url   query: null,
+824 verbose parsed url   pathname: '~2.2.0rc',
+824 verbose parsed url   path: '~2.2.0rc',
+824 verbose parsed url   href: '~2.2.0rc' }
+825 verbose addNamed [ 'underscore.string', '~2.2.0rc' ]
+826 verbose addNamed [ null, null ]
+827 silly lockFile d5a5a3c6-underscore-string-2-2-0rc underscore.string@~2.2.0rc
+828 verbose lock underscore.string@~2.2.0rc /home/clement/.npm/d5a5a3c6-underscore-string-2-2-0rc.lock
+829 verbose cache add [ 'which@~1.0.5', null ]
+830 verbose cache add name=undefined spec="which@~1.0.5" args=["which@~1.0.5",null]
+831 verbose parsed url { protocol: null,
+831 verbose parsed url   slashes: null,
+831 verbose parsed url   auth: null,
+831 verbose parsed url   host: null,
+831 verbose parsed url   port: null,
+831 verbose parsed url   hostname: null,
+831 verbose parsed url   hash: null,
+831 verbose parsed url   search: null,
+831 verbose parsed url   query: null,
+831 verbose parsed url   pathname: 'which@~1.0.5',
+831 verbose parsed url   path: 'which@~1.0.5',
+831 verbose parsed url   href: 'which@~1.0.5' }
+832 verbose cache add name="which" spec="~1.0.5" args=["which","~1.0.5"]
+833 verbose parsed url { protocol: null,
+833 verbose parsed url   slashes: null,
+833 verbose parsed url   auth: null,
+833 verbose parsed url   host: null,
+833 verbose parsed url   port: null,
+833 verbose parsed url   hostname: null,
+833 verbose parsed url   hash: null,
+833 verbose parsed url   search: null,
+833 verbose parsed url   query: null,
+833 verbose parsed url   pathname: '~1.0.5',
+833 verbose parsed url   path: '~1.0.5',
+833 verbose parsed url   href: '~1.0.5' }
+834 verbose addNamed [ 'which', '~1.0.5' ]
+835 verbose addNamed [ null, '>=1.0.5-0 <1.1.0-0' ]
+836 silly lockFile d158d65e-which-1-0-5 which@~1.0.5
+837 verbose lock which@~1.0.5 /home/clement/.npm/d158d65e-which-1-0-5.lock
+838 verbose cache add [ 'js-yaml@~2.0.2', null ]
+839 verbose cache add name=undefined spec="js-yaml@~2.0.2" args=["js-yaml@~2.0.2",null]
+840 verbose parsed url { protocol: null,
+840 verbose parsed url   slashes: null,
+840 verbose parsed url   auth: null,
+840 verbose parsed url   host: null,
+840 verbose parsed url   port: null,
+840 verbose parsed url   hostname: null,
+840 verbose parsed url   hash: null,
+840 verbose parsed url   search: null,
+840 verbose parsed url   query: null,
+840 verbose parsed url   pathname: 'js-yaml@~2.0.2',
+840 verbose parsed url   path: 'js-yaml@~2.0.2',
+840 verbose parsed url   href: 'js-yaml@~2.0.2' }
+841 verbose cache add name="js-yaml" spec="~2.0.2" args=["js-yaml","~2.0.2"]
+842 verbose parsed url { protocol: null,
+842 verbose parsed url   slashes: null,
+842 verbose parsed url   auth: null,
+842 verbose parsed url   host: null,
+842 verbose parsed url   port: null,
+842 verbose parsed url   hostname: null,
+842 verbose parsed url   hash: null,
+842 verbose parsed url   search: null,
+842 verbose parsed url   query: null,
+842 verbose parsed url   pathname: '~2.0.2',
+842 verbose parsed url   path: '~2.0.2',
+842 verbose parsed url   href: '~2.0.2' }
+843 verbose addNamed [ 'js-yaml', '~2.0.2' ]
+844 verbose addNamed [ null, '>=2.0.2-0 <2.1.0-0' ]
+845 silly lockFile 0dc3e23f-js-yaml-2-0-2 js-yaml@~2.0.2
+846 verbose lock js-yaml@~2.0.2 /home/clement/.npm/0dc3e23f-js-yaml-2-0-2.lock
+847 verbose url raw coffee-script
+848 verbose url resolving [ 'https://registry.npmjs.org/', './coffee-script' ]
+849 verbose url resolved https://registry.npmjs.org/coffee-script
+850 info trying registry request attempt 1 at 15:35:07
+851 verbose etag "FMB4Y6SCJR32P6J30F565TLM"
+852 http GET https://registry.npmjs.org/coffee-script
+853 verbose url raw colors
+854 verbose url resolving [ 'https://registry.npmjs.org/', './colors' ]
+855 verbose url resolved https://registry.npmjs.org/colors
+856 info trying registry request attempt 1 at 15:35:07
+857 verbose etag "6A8GBHDKZ62PGBI3M1NRGH6L7"
+858 http GET https://registry.npmjs.org/colors
+859 silly addNameRange { name: 'eventemitter2',
+859 silly addNameRange   range: '>=0.4.9-0 <0.5.0-0',
+859 silly addNameRange   hasData: false }
+860 silly addNameRange { name: 'glob', range: '>=3.1.21-0 <3.2.0-0', hasData: false }
+861 silly addNameRange { name: 'findup-sync',
+861 silly addNameRange   range: '>=0.1.0-0 <0.2.0-0',
+861 silly addNameRange   hasData: false }
+862 silly addNameRange { name: 'hooker', range: '>=0.2.3-0 <0.3.0-0', hasData: false }
+863 silly addNameRange { name: 'iconv-lite',
+863 silly addNameRange   range: '>=0.2.5-0 <0.3.0-0',
+863 silly addNameRange   hasData: false }
+864 silly addNameRange { name: 'minimatch',
+864 silly addNameRange   range: '>=0.2.6-0 <0.3.0-0',
+864 silly addNameRange   hasData: false }
+865 silly addNameRange { name: 'nopt', range: '>=1.0.10-0 <1.1.0-0', hasData: false }
+866 silly addNameRange { name: 'rimraf', range: '>=2.0.2-0 <2.1.0-0', hasData: false }
+867 silly addNameRange { name: 'lodash', range: '>=0.9.0-0 <0.10.0-0', hasData: false }
+868 silly addNameRange { name: 'underscore.string',
+868 silly addNameRange   range: '>=2.2.0-rc <2.3.0-0',
+868 silly addNameRange   hasData: false }
+869 silly addNameRange { name: 'which', range: '>=1.0.5-0 <1.1.0-0', hasData: false }
+870 silly addNameRange { name: 'js-yaml', range: '>=2.0.2-0 <2.1.0-0', hasData: false }
+871 verbose url raw dateformat/1.0.2-1.2.3
+872 verbose url resolving [ 'https://registry.npmjs.org/', './dateformat/1.0.2-1.2.3' ]
+873 verbose url resolved https://registry.npmjs.org/dateformat/1.0.2-1.2.3
+874 info trying registry request attempt 1 at 15:35:07
+875 verbose etag "53MGS4758SFBP4J0VMOWHAVRB"
+876 http GET https://registry.npmjs.org/dateformat/1.0.2-1.2.3
+877 verbose url raw eventemitter2
+878 verbose url resolving [ 'https://registry.npmjs.org/', './eventemitter2' ]
+879 verbose url resolved https://registry.npmjs.org/eventemitter2
+880 info trying registry request attempt 1 at 15:35:07
+881 verbose etag "AVDFXO3Z0C3KMSBGB7JOT9R8S"
+882 http GET https://registry.npmjs.org/eventemitter2
+883 verbose url raw glob
+884 verbose url resolving [ 'https://registry.npmjs.org/', './glob' ]
+885 verbose url resolved https://registry.npmjs.org/glob
+886 info trying registry request attempt 1 at 15:35:07
+887 verbose etag "FHUPEI84RTD0TUQHAT6GOLU3"
+888 http GET https://registry.npmjs.org/glob
+889 verbose url raw findup-sync
+890 verbose url resolving [ 'https://registry.npmjs.org/', './findup-sync' ]
+891 verbose url resolved https://registry.npmjs.org/findup-sync
+892 info trying registry request attempt 1 at 15:35:07
+893 verbose etag "BFALDACBDE84KEJ1UFRKML8CD"
+894 http GET https://registry.npmjs.org/findup-sync
+895 verbose url raw hooker
+896 verbose url resolving [ 'https://registry.npmjs.org/', './hooker' ]
+897 verbose url resolved https://registry.npmjs.org/hooker
+898 info trying registry request attempt 1 at 15:35:07
+899 verbose etag "4NS4EOCQXZ0NB6PG3PIW1TD6M"
+900 http GET https://registry.npmjs.org/hooker
+901 verbose url raw iconv-lite
+902 verbose url resolving [ 'https://registry.npmjs.org/', './iconv-lite' ]
+903 verbose url resolved https://registry.npmjs.org/iconv-lite
+904 info trying registry request attempt 1 at 15:35:07
+905 verbose etag "A2T3FVHI8039SNILC54LU3Y3S"
+906 http GET https://registry.npmjs.org/iconv-lite
+907 verbose url raw minimatch
+908 verbose url resolving [ 'https://registry.npmjs.org/', './minimatch' ]
+909 verbose url resolved https://registry.npmjs.org/minimatch
+910 info trying registry request attempt 1 at 15:35:07
+911 verbose etag "433GUXE31BY78MEUH5M7CIXOG"
+912 http GET https://registry.npmjs.org/minimatch
+913 verbose url raw nopt
+914 verbose url resolving [ 'https://registry.npmjs.org/', './nopt' ]
+915 verbose url resolved https://registry.npmjs.org/nopt
+916 info trying registry request attempt 1 at 15:35:07
+917 verbose etag "BP28HFNHLIWHELLFJ2AYRRKY5"
+918 http GET https://registry.npmjs.org/nopt
+919 verbose url raw rimraf
+920 verbose url resolving [ 'https://registry.npmjs.org/', './rimraf' ]
+921 verbose url resolved https://registry.npmjs.org/rimraf
+922 info trying registry request attempt 1 at 15:35:07
+923 verbose etag "50X3LWQDSY1SAULXQ7QRKW4PE"
+924 http GET https://registry.npmjs.org/rimraf
+925 verbose url raw lodash
+926 verbose url resolving [ 'https://registry.npmjs.org/', './lodash' ]
+927 verbose url resolved https://registry.npmjs.org/lodash
+928 info trying registry request attempt 1 at 15:35:07
+929 verbose etag "1MWPQ14ETWZB2VV0XZ286YM5V"
+930 http GET https://registry.npmjs.org/lodash
+931 verbose url raw underscore.string
+932 verbose url resolving [ 'https://registry.npmjs.org/', './underscore.string' ]
+933 verbose url resolved https://registry.npmjs.org/underscore.string
+934 info trying registry request attempt 1 at 15:35:07
+935 verbose etag "82KONBUKGVFGLKPUIJ91QHEA4"
+936 http GET https://registry.npmjs.org/underscore.string
+937 verbose url raw which
+938 verbose url resolving [ 'https://registry.npmjs.org/', './which' ]
+939 verbose url resolved https://registry.npmjs.org/which
+940 info trying registry request attempt 1 at 15:35:07
+941 verbose etag "43PJVZ0U2IY5DUOK5LXY2JGYD"
+942 http GET https://registry.npmjs.org/which
+943 verbose url raw js-yaml
+944 verbose url resolving [ 'https://registry.npmjs.org/', './js-yaml' ]
+945 verbose url resolved https://registry.npmjs.org/js-yaml
+946 info trying registry request attempt 1 at 15:35:07
+947 verbose etag "3VR85R8D6LM70C738LW121H9B"
+948 http GET https://registry.npmjs.org/js-yaml
+949 http 304 https://registry.npmjs.org/connect
+950 silly registry.get cb [ 304,
+950 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+950 silly registry.get     etag: '"BMYU0F59PKAU2TU809X3GINQK"',
+950 silly registry.get     date: 'Thu, 19 Sep 2013 07:35:08 GMT',
+950 silly registry.get     'content-length': '0' } ]
+951 verbose etag connect from cache
+952 silly addNameRange number 2 { name: 'connect', range: '>=2.7.0-0 <2.8.0-0', hasData: true }
+953 silly addNameRange versions [ 'connect',
+953 silly addNameRange   [ '0.0.1',
+953 silly addNameRange     '0.0.2',
+953 silly addNameRange     '0.0.3',
+953 silly addNameRange     '0.0.4',
+953 silly addNameRange     '0.0.5',
+953 silly addNameRange     '0.0.6',
+953 silly addNameRange     '0.1.0',
+953 silly addNameRange     '0.2.0',
+953 silly addNameRange     '0.2.1',
+953 silly addNameRange     '0.2.2',
+953 silly addNameRange     '0.2.3',
+953 silly addNameRange     '0.2.4',
+953 silly addNameRange     '0.2.5',
+953 silly addNameRange     '0.2.6',
+953 silly addNameRange     '0.2.7',
+953 silly addNameRange     '0.3.0',
+953 silly addNameRange     '0.4.0',
+953 silly addNameRange     '0.5.0',
+953 silly addNameRange     '0.5.1',
+953 silly addNameRange     '0.5.2',
+953 silly addNameRange     '0.5.3',
+953 silly addNameRange     '0.5.4',
+953 silly addNameRange     '0.5.5',
+953 silly addNameRange     '0.5.6',
+953 silly addNameRange     '0.5.7',
+953 silly addNameRange     '0.5.8',
+953 silly addNameRange     '0.5.9',
+953 silly addNameRange     '0.5.10',
+953 silly addNameRange     '1.0.0',
+953 silly addNameRange     '1.0.1',
+953 silly addNameRange     '1.0.2',
+953 silly addNameRange     '1.0.3',
+953 silly addNameRange     '1.0.4',
+953 silly addNameRange     '1.0.5',
+953 silly addNameRange     '1.0.6',
+953 silly addNameRange     '1.1.0',
+953 silly addNameRange     '1.1.1',
+953 silly addNameRange     '1.1.2',
+953 silly addNameRange     '1.1.3',
+953 silly addNameRange     '1.1.4',
+953 silly addNameRange     '1.1.5',
+953 silly addNameRange     '1.2.0',
+953 silly addNameRange     '1.2.1',
+953 silly addNameRange     '1.2.2',
+953 silly addNameRange     '1.2.3',
+953 silly addNameRange     '1.3.0',
+953 silly addNameRange     '1.4.0',
+953 silly addNameRange     '1.4.1',
+953 silly addNameRange     '1.4.2',
+953 silly addNameRange     '1.4.3',
+953 silly addNameRange     '1.4.4',
+953 silly addNameRange     '1.4.5',
+953 silly addNameRange     '1.4.6',
+953 silly addNameRange     '1.5.0',
+953 silly addNameRange     '1.5.1',
+953 silly addNameRange     '1.5.2',
+953 silly addNameRange     '1.6.0',
+953 silly addNameRange     '1.6.1',
+953 silly addNameRange     '1.6.2',
+953 silly addNameRange     '1.6.3',
+953 silly addNameRange     '1.6.4',
+953 silly addNameRange     '1.7.0',
+953 silly addNameRange     '1.7.1',
+953 silly addNameRange     '1.7.2',
+953 silly addNameRange     '1.7.3',
+953 silly addNameRange     '1.8.0',
+953 silly addNameRange     '1.8.1',
+953 silly addNameRange     '1.8.2',
+953 silly addNameRange     '1.8.3',
+953 silly addNameRange     '1.8.4',
+953 silly addNameRange     '1.8.5',
+953 silly addNameRange     '2.0.0',
+953 silly addNameRange     '2.0.1',
+953 silly addNameRange     '2.0.2',
+953 silly addNameRange     '2.0.3',
+953 silly addNameRange     '1.8.6',
+953 silly addNameRange     '2.1.0',
+953 silly addNameRange     '2.1.1',
+953 silly addNameRange     '2.1.2',
+953 silly addNameRange     '1.8.7',
+953 silly addNameRange     '2.1.3',
+953 silly addNameRange     '2.2.0',
+953 silly addNameRange     '2.2.1',
+953 silly addNameRange     '2.2.2',
+953 silly addNameRange     '2.3.0',
+953 silly addNameRange     '2.3.1',
+953 silly addNameRange     '2.3.2',
+953 silly addNameRange     '2.3.3',
+953 silly addNameRange     '1.9.0',
+953 silly addNameRange     '1.9.1',
+953 silly addNameRange     '2.3.4',
+953 silly addNameRange     '2.3.5',
+953 silly addNameRange     '2.3.6',
+953 silly addNameRange     '2.3.7',
+953 silly addNameRange     '1.9.2',
+953 silly addNameRange     '2.3.8',
+953 silly addNameRange     '2.3.9',
+953 silly addNameRange     '2.4.0',
+953 silly addNameRange     '2.4.1',
+953 silly addNameRange     '2.4.2',
+953 silly addNameRange     '2.4.3',
+953 silly addNameRange     '2.4.4',
+953 silly addNameRange     '2.4.5',
+953 silly addNameRange     '2.4.6',
+953 silly addNameRange     '2.5.0',
+953 silly addNameRange     '2.6.0',
+953 silly addNameRange     '2.6.1',
+953 silly addNameRange     '2.6.2',
+953 silly addNameRange     '2.7.0',
+953 silly addNameRange     '2.7.1',
+953 silly addNameRange     '2.7.2',
+953 silly addNameRange     '2.7.3',
+953 silly addNameRange     '2.7.4',
+953 silly addNameRange     '2.7.5',
+953 silly addNameRange     '2.7.6',
+953 silly addNameRange     '2.7.7',
+953 silly addNameRange     '2.7.8',
+953 silly addNameRange     '2.7.9',
+953 silly addNameRange     '2.7.10',
+953 silly addNameRange     '2.7.11',
+953 silly addNameRange     '2.8.0',
+953 silly addNameRange     '2.8.1',
+953 silly addNameRange     '2.8.2',
+953 silly addNameRange     '2.8.3',
+953 silly addNameRange     '2.8.4',
+953 silly addNameRange     '2.8.5',
+953 silly addNameRange     '2.8.6',
+953 silly addNameRange     '2.8.7',
+953 silly addNameRange     '2.8.8',
+953 silly addNameRange     '2.9.0' ] ]
+954 verbose addNamed [ 'connect', '2.7.11' ]
+955 verbose addNamed [ '2.7.11', '2.7.11' ]
+956 silly lockFile 4ba73353-connect-2-7-11 connect@2.7.11
+957 verbose lock connect@2.7.11 /home/clement/.npm/4ba73353-connect-2-7-11.lock
+958 silly lockFile 4ba73353-connect-2-7-11 connect@2.7.11
+959 silly lockFile 4ba73353-connect-2-7-11 connect@2.7.11
+960 silly lockFile 9a1b93d2-connect-2-7-x connect@2.7.x
+961 silly lockFile 9a1b93d2-connect-2-7-x connect@2.7.x
+962 http 200 http://github.com/maboiteaspam/phantomizer-websupport.git
+963 verbose tar unpack /home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/tmp.tgz
+964 silly lockFile 36722f09-07173-0-5599829009734094-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/package
+965 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/package /home/clement/.npm/36722f09-07173-0-5599829009734094-package.lock
+966 silly lockFile 0774c1e3-07173-0-5599829009734094-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/tmp.tgz
+967 verbose lock tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/tmp.tgz /home/clement/.npm/0774c1e3-07173-0-5599829009734094-tmp-tgz.lock
+968 silly gunzTarPerm modes [ '755', '644' ]
+969 error not a package /home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/tmp.tgz
+970 silly lockFile 36722f09-07173-0-5599829009734094-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/package
+971 silly lockFile 36722f09-07173-0-5599829009734094-package tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/package
+972 silly lockFile 0774c1e3-07173-0-5599829009734094-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/tmp.tgz
+973 silly lockFile 0774c1e3-07173-0-5599829009734094-tmp-tgz tar:///home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/tmp.tgz
+974 silly lockFile 7534d592-aspam-phantomizer-websupport-git http://github.com/maboiteaspam/phantomizer-websupport.git
+975 silly lockFile 7534d592-aspam-phantomizer-websupport-git http://github.com/maboiteaspam/phantomizer-websupport.git
+976 verbose about to build /home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/phantomizer
+977 info /home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/phantomizer unbuild
+978 info preuninstall phantomizer@0.1.0
+979 info uninstall phantomizer@0.1.0
+980 verbose false,/home/clement/lib/node_modules,/home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules unbuild phantomizer@0.1.0
+981 verbose /home/clement/lib/node_modules/phantomizer-qunit-runner/node_modules/.bin,[object Object] binRoot
+982 info postuninstall phantomizer@0.1.0
+983 verbose about to build /home/clement/lib/node_modules/phantomizer-qunit-runner
+984 info /home/clement/lib/node_modules/phantomizer-qunit-runner unbuild
+985 info preuninstall phantomizer-qunit-runner@0.1.0
+986 info uninstall phantomizer-qunit-runner@0.1.0
+987 verbose true,/home/clement/lib/node_modules,/home/clement/lib/node_modules unbuild phantomizer-qunit-runner@0.1.0
+988 info postuninstall phantomizer-qunit-runner@0.1.0
+989 http 200 http://github.com/maboiteaspam/phantomizer-libutil.git
+990 error Error: ENOENT, open '/home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/package/package.json'
+991 error If you need help, you may report this log at:
+991 error     <http://github.com/isaacs/npm/issues>
+991 error or email it to:
+991 error     <npm-@googlegroups.com>
+992 error System Linux 3.8.0-31-generic
+993 error command "/home/clement/bin/node" "/home/clement/bin/npm" "install" "." "-g"
+994 error cwd /home/clement/Bureau/njs/phantomizer-modules/phantomizer-qunit-runner
+995 error node -v v0.10.16
+996 error npm -v 1.3.8
+997 error path /home/clement/tmp/npm-1655-HbYFF4o4/1379576107173-0.5599829009734094/package/package.json
+998 error code ENOENT
+999 error errno 34
+1000 verbose exit [ 34, true ]
