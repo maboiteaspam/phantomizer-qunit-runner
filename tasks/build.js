@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
         var webserver = ph.webserver;
         var grunt_config = grunt.config.get();
-        grunt_config.log = true;
+        grunt_config.log = false;
         grunt_config.web_paths = options.paths;
         webserver = new webserver(process.cwd(), grunt_config);
         webserver.is_phantom(true);
