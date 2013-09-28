@@ -6,7 +6,6 @@ module.exports = function(grunt) {
 
         var ph = require("phantomizer");
 
-
         var q_options = {
             all:{
                 force:true,
@@ -21,7 +20,7 @@ module.exports = function(grunt) {
 
         var webserver = ph.webserver;
         var grunt_config = grunt.config.get();
-        grunt_config.log = false;
+        grunt_config.log = true;
         grunt_config.web_paths = options.paths;
         webserver = new webserver(process.cwd(), grunt_config);
         webserver.is_phantom(true);
@@ -47,6 +46,7 @@ module.exports = function(grunt) {
                 url = base_url+url;
                 url = url+(url.indexOf("?")>-1?"&":"?");
                 url = url+"spec_files="+tests;
+                url = url+"&no_dashboard=true";
                 q_options.all.options.urls.push( url );
             }
         }else if ( grunt_config.routing ){
@@ -66,6 +66,7 @@ module.exports = function(grunt) {
                 url = base_url+url;
                 url = url+(url.indexOf("?")>-1?"&":"?");
                 url = url+"spec_files="+tests;
+                url = url+"&no_dashboard=true";
                 q_options.all.options.urls.push( url );
             }
         }
@@ -74,7 +75,6 @@ module.exports = function(grunt) {
             webserver.stop();
         });
         grunt.config.set("qunit", q_options);
-        grunt.task.run(["qunit","stop"],function(){
-        })
+        grunt.task.run(["qunit","stop"])
     });
 };
