@@ -2,8 +2,7 @@
 
 module.exports = function(grunt) {
 
-    grunt.registerTask("phantomizer-qunit-runner", "", function () {
-
+    grunt.registerMultiTask("phantomizer-qunit-runner", "", function () {
 
         var ph = require("phantomizer");
 
@@ -11,6 +10,7 @@ module.exports = function(grunt) {
         var q_options = {
             all:{
                 force:true,
+                test_scripts_base_url:"/js/tests/",
                 options: {
                     urls: []
                 }
@@ -20,37 +20,55 @@ module.exports = function(grunt) {
         grunt.verbose.writeflags(options, 'Options');
 
         var webserver = ph.webserver;
-        var grunt_options = grunt.config.get();
-        grunt_options.log = false;
-        // grunt_options.web_paths.unshift(grunt_options.export_dir);
-        webserver = new webserver(process.cwd(), grunt_options);
+        var grunt_config = grunt.config.get();
+        grunt_config.log = false;
+        grunt_config.web_paths = options.paths;
+        webserver = new webserver(process.cwd(), grunt_config);
         webserver.is_phantom(true);
         webserver.enable_dashboard(false);
         webserver.enable_build(false);
-        // webserver.enable_assets_inject(false);
+        webserver.enable_assets_inject(options.inject_assets);
         webserver.start(options.port, options.ssl_port);
 
         var base_url = options.base_url;
-        var urls = options.urls;
 
         if( base_url.substring(base_url.length-1) == "/" ){
             base_url = base_url.substring(0, base_url.length-1)
         }
 
+        if( options.urls && options.urls.length > 0 ){
+            for( var url in options.urls ){
+                var tests = options.urls[url];
+                for( var nn in tests ){
+                    tests[nn] = options.test_scripts_base_url+tests[nn]+".js";
+                }
+                tests = tests.join(",");
 
-        for( var url in urls ){
-            var tests = urls[url]
-            for( var nn in tests ){
-                tests[nn] = "/js/tests/"+tests[nn]+".js"
+                url = base_url+url;
+                url = url+(url.indexOf("?")>-1?"&":"?");
+                url = url+"spec_files="+tests;
+                q_options.all.options.urls.push( url );
             }
-            tests = tests.join(",")
+        }else if ( grunt_config.routing ){
+            for( var n in grunt_config.routing ){
+                var route = grunt_config.routing[n];
 
-            url = base_url+url;
-            url = url+(url.indexOf("?")>-1?"&":"?");
-            url = url+"spec_files="+tests;
-            q_options.all.options.urls.push( url )
+                var url = route.template;
+                if( route.test_url ){
+                    url = route.test_url;
+                }
+                var tests = [];
+                for( var nn in route.tests ){
+                    tests.push(options.test_scripts_base_url+"/"+route.tests[nn]+".js");
+                }
+                tests = tests.join(",");
+
+                url = base_url+url;
+                url = url+(url.indexOf("?")>-1?"&":"?");
+                url = url+"spec_files="+tests;
+                q_options.all.options.urls.push( url );
+            }
         }
-
 
         grunt.registerTask('stop', 'Stop the webserver.', function() {
             webserver.stop();
