@@ -39,7 +39,9 @@ module.exports = function(grunt) {
             for( var url in options.urls ){
                 var tests = options.urls[url];
                 for( var nn in tests ){
-                    tests[nn] = options.test_scripts_base_url+tests[nn]+".js";
+                    var t = options.test_scripts_base_url+"/"+tests[nn]+".js";
+                    t = t.replace("//","/");
+                    tests.push(t);
                 }
                 tests = tests.join(",");
 
@@ -59,7 +61,9 @@ module.exports = function(grunt) {
                 }
                 var tests = [];
                 for( var nn in route.tests ){
-                    tests.push(options.test_scripts_base_url+"/"+route.tests[nn]+".js");
+                    var t = options.test_scripts_base_url+"/"+route.tests[nn]+".js";
+                    t = t.replace("//","/");
+                    tests.push(t);
                 }
                 tests = tests.join(",");
 
