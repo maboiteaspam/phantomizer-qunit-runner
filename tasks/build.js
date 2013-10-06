@@ -2,9 +2,21 @@
 
 module.exports = function(grunt) {
 
+    var ph = require("phantomizer");
+    var ph_libutil = require("phantomizer-libutil");
+
     grunt.registerMultiTask("phantomizer-qunit-runner", "", function () {
 
-        var ph = require("phantomizer");
+        var webserver = ph.webserver;
+
+        var router_factory = ph_libutil.router;
+        var optimizer_factory = ph_libutil.optimizer;
+        var meta_factory = ph_libutil.meta;
+
+        var config = grunt.config.get();
+        var meta_manager = new meta_factory(process.cwd(), config.meta_dir)
+        var optimizer = new optimizer_factory(meta_manager, config)
+        var router = new router_factory(config.routing);
 
         var q_options = {
             all:{
@@ -18,67 +30,72 @@ module.exports = function(grunt) {
         var options = this.options({urls:[]})
         grunt.verbose.writeflags(options, 'Options');
 
-        var webserver = ph.webserver;
-        var grunt_config = grunt.config.get();
-        grunt_config.log = false;
-        grunt_config.web_paths = options.paths;
-        webserver = new webserver(process.cwd(), grunt_config);
-        webserver.is_phantom(true);
-        webserver.enable_dashboard(false);
-        webserver.enable_build(false);
-        webserver.enable_assets_inject(options.inject_assets);
-        webserver.start(options.port, options.ssl_port);
+        var done = this.async();
+        router.load(function(){
 
-        var base_url = options.base_url;
 
-        if( base_url.substring(base_url.length-1) == "/" ){
-            base_url = base_url.substring(0, base_url.length-1)
-        }
+            grunt_config.log = false;
+            grunt_config.web_paths = options.paths;
 
-        if( options.urls && options.urls.length > 0 ){
-            for( var url in options.urls ){
-                var tests = options.urls[url];
-                for( var nn in tests ){
-                    var t = options.test_scripts_base_url+"/"+tests[nn]+".js";
-                    t = t.replace("//","/");
-                    tests.push(t);
-                }
-                tests = tests.join(",");
+            webserver = new webserver(router,optimizer,meta_manager,process.cwd(), grunt_config);
+            webserver.is_phantom(true);
+            webserver.enable_dashboard(false);
+            webserver.enable_build(false);
+            webserver.enable_assets_inject(options.inject_assets);
+            webserver.start(options.port, options.ssl_port);
 
-                url = base_url+url;
-                url = url+(url.indexOf("?")>-1?"&":"?");
-                url = url+"spec_files="+tests;
-                url = url+"&no_dashboard=true";
-                q_options.all.options.urls.push( url );
+            var base_url = options.base_url;
+
+            if( base_url.substring(base_url.length-1) == "/" ){
+                base_url = base_url.substring(0, base_url.length-1)
             }
-        }else if ( grunt_config.routing ){
-            for( var n in grunt_config.routing ){
-                var route = grunt_config.routing[n];
 
-                var url = route.template;
-                if( route.test_url ){
-                    url = route.test_url;
-                }
-                var tests = [];
-                for( var nn in route.tests ){
-                    var t = options.test_scripts_base_url+"/"+route.tests[nn]+".js";
-                    t = t.replace("//","/");
-                    tests.push(t);
-                }
-                tests = tests.join(",");
+            if( options.urls && options.urls.length > 0 ){
+                for( var url in options.urls ){
+                    var tests = options.urls[url];
+                    for( var nn in tests ){
+                        var t = tests[nn];
+                        t = t.replace("//","/");
+                        tests.push(t);
+                    }
+                    tests = tests.join(",");
 
-                url = base_url+url;
-                url = url+(url.indexOf("?")>-1?"&":"?");
-                url = url+"spec_files="+tests;
-                url = url+"&no_dashboard=true";
-                q_options.all.options.urls.push( url );
+                    url = base_url+url;
+                    url = url+(url.indexOf("?")>-1?"&":"?");
+                    url = url+"spec_files="+tests;
+                    url = url+"&no_dashboard=true";
+                    q_options.all.options.urls.push( url );
+                }
+            }else if ( grunt_config.routing ){
+                for( var n in grunt_config.routing ){
+                    var route = grunt_config.routing[n];
+
+                    var url = route.template;
+                    if( route.test_url ){
+                        url = route.test_url;
+                    }
+                    var tests = [];
+                    for( var nn in route.tests ){
+                        var t = route.tests[nn];
+                        t = t.replace("//","/");
+                        tests.push(t);
+                    }
+                    tests = tests.join(",");
+
+                    url = base_url+url;
+                    url = url+(url.indexOf("?")>-1?"&":"?");
+                    url = url+"spec_files="+tests;
+                    url = url+"&no_dashboard=true";
+                    q_options.all.options.urls.push( url );
+                }
             }
-        }
 
-        grunt.registerTask('stop', 'Stop the webserver.', function() {
-            webserver.stop();
+            grunt.registerTask('stop', 'Stop the webserver.', function() {
+                webserver.stop();
+            });
+            grunt.config.set("qunit", q_options);
+            grunt.task.run(["qunit","stop"])
+            done();
         });
-        grunt.config.set("qunit", q_options);
-        grunt.task.run(["qunit","stop"])
     });
 };
