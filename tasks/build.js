@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                     url = base_url+url;
                     url = url+(url.indexOf("?")>-1?"&":"?");
                     url = url+"spec_files="+tests;
-                    url = url+"&no_dashboard=true";
+                    //url = url+"&no_dashboard=true"; under windows the & makes bug
                     q_options.all.options.urls.push( url );
                 }
             }else if ( grunt_config.routing ){
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
                     url = base_url+url;
                     url = url+(url.indexOf("?")>-1?"&":"?");
                     url = url+"spec_files="+tests;
-                    url = url+"&no_dashboard=true";
+                    //url = url+"&no_dashboard=true"; under windows the & makes bug
                     q_options.all.options.urls.push( url );
                 }
             }
