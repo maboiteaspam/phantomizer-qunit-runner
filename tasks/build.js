@@ -13,10 +13,10 @@ module.exports = function(grunt) {
         var optimizer_factory = ph_libutil.optimizer;
         var meta_factory = ph_libutil.meta;
 
-        var config = grunt.config.get();
-        var meta_manager = new meta_factory(process.cwd(), config.meta_dir)
-        var optimizer = new optimizer_factory(meta_manager, config)
-        var router = new router_factory(config.routing);
+        var grunt_config = grunt.config.get();
+        var meta_manager = new meta_factory(process.cwd(), grunt_config.meta_dir)
+        var optimizer = new optimizer_factory(meta_manager, grunt_config)
+        var router = new router_factory(grunt_config.routing);
 
         var q_options = {
             all:{
