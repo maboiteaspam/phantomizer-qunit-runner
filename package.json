@@ -2,7 +2,7 @@
     "name": "phantomizer-qunit-runner",
     "version": "0.1.13",
     "private": true,
-    "description": "Qunit testing support for phantomizer",
+    "description": "Qunit testing support for phantomizer test",
     "keywords": "",
     "bugs": {
         "url": "http://github.com/maboiteaspam/phantomizer-qunit-runner/issues",
