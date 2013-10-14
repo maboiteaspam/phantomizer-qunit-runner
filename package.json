@@ -16,7 +16,7 @@
     "dependencies": {
         "grunt": "0.4.x",
         "grunt-contrib-qunit": "0.2.x",
-        "phantomizer": "maboiteaspam/maboiteaspam/maboiteaspam/maboiteaspam/phantomizer#3ff0c6a",
+        "phantomizer": "maboiteaspam/maboiteaspam/maboiteaspam/maboiteaspam/maboiteaspam/phantomizer#5f280bc",
         "phantomizer-libutil": "maboiteaspam/maboiteaspam/maboiteaspam/phantomizer-libutil#010b357"
     }
 }
