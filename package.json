@@ -1,6 +1,6 @@
 {
     "name": "phantomizer-qunit-runner",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "private": true,
     "description": "Qunit testing support for phantomizer",
     "keywords": "",
