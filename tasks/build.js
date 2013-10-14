@@ -2,12 +2,11 @@
 
 module.exports = function(grunt) {
 
-    var ph = require("phantomizer");
     var ph_libutil = require("phantomizer-libutil");
 
     grunt.registerMultiTask("phantomizer-qunit-runner", "", function () {
 
-        var webserver = ph.webserver;
+        var webserver = ph_libutil.webserver;
 
         var router_factory = ph_libutil.router;
         var optimizer_factory = ph_libutil.optimizer;
