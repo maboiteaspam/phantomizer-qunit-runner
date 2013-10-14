@@ -1,22 +1,22 @@
 {
-  "name": "phantomizer-qunit-runner",
-  "version": "0.1.1",
+    "name": "phantomizer-qunit-runner",
+    "version": "0.1.1",
     "private": true,
     "description": "Qunit testing support for phantomizer",
     "keywords": "",
     "bugs": {
-        "url" : "http://github.com/maboiteaspam/phantomizer-qunit-runner/issues",
-        "email" : "none@host.com"
+        "url": "http://github.com/maboiteaspam/phantomizer-qunit-runner/issues",
+        "email": "none@host.com"
     },
-    "license" : "mit",
-    "repository" :{
-        "type" : "git",
-        "url" : "http://github.com/maboiteaspam/phantomizer-qunit-runner.git"
+    "license": "mit",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/maboiteaspam/phantomizer-qunit-runner.git"
     },
-  "dependencies": {
-      "grunt": "0.4.x",
-      "grunt-contrib-qunit": "0.2.x"
-      ,"phantomizer": "maboiteaspam/phantomizer"
-      ,"phantomizer-libutil": "maboiteaspam/phantomizer-libutil"
-  }
+    "dependencies": {
+        "grunt": "0.4.x",
+        "grunt-contrib-qunit": "0.2.x",
+        "phantomizer": "maboiteaspam/maboiteaspam/maboiteaspam/phantomizer#16cd95f",
+        "phantomizer-libutil": "maboiteaspam/maboiteaspam/maboiteaspam/phantomizer-libutil#010b357"
+    }
 }
