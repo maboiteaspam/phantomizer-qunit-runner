@@ -92,6 +92,12 @@ module.exports = function(grunt) {
             grunt.registerTask('stop', 'Stop the webserver.', function() {
                 webserver.stop();
             });
+
+            grunt.event.on('qunit.error.onError', function (message, stackTrace) {
+                if( stackTrace[0] && !stackTrace[0].file.match(/grunt-contrib-qunit\/phantomjs\/bridge[.]js$/))
+                    grunt.log.ok("error.onError: " ,stackTrace);
+            });
+
             grunt.config.set("qunit", q_options);
             grunt.task.run(["qunit","stop"])
             done();
