@@ -49,6 +49,8 @@ module.exports = function(grunt) {
                 base_url = base_url.substring(0, base_url.length-1)
             }
 
+            grunt.log.ok("Building testing urls")
+
             if( options.urls && options.urls.length > 0 ){
                 for( var url in options.urls ){
                     var tests = options.urls[url];
@@ -81,11 +83,16 @@ module.exports = function(grunt) {
                     }
                     tests = tests.join(",");
 
-                    url = base_url+url;
-                    url = url+(url.indexOf("?")>-1?"&":"?");
-                    url = url+"spec_files="+tests;
-                    //url = url+"&no_dashboard=true"; under windows the & makes bug
-                    q_options.all.options.urls.push( url );
+                    if( tests.length == 0 ){
+                        grunt.log.warn("Mising tests for url "+url)
+                    }else{
+                        url = base_url+url;
+                        url = url+(url.indexOf("?")>-1?"&":"?");
+                        url = url+"spec_files="+tests;
+                        //url = url+"&no_dashboard=true"; under windows the & makes bug
+                        q_options.all.options.urls.push( url );
+                    }
+
                 }
             }
 
