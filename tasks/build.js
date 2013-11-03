@@ -26,7 +26,14 @@ module.exports = function(grunt) {
                 }
             }
         }
-        var options = this.options({urls:[]})
+        var options = this.options({
+            urls:[],
+            paths:[],
+            inject_assets:false,
+            base_url:"",
+            port:"",
+            ssl_port:""
+        })
         grunt.verbose.writeflags(options, 'Options');
 
         var done = this.async();
