@@ -21,6 +21,7 @@ module.exports = function(grunt) {
             all:{
                 force:true,
                 test_scripts_base_url:"/js/tests/",
+                inject:null, // no need to inject scripts here, we will do it by our own in the browser by the browser
                 options: {
                     urls: []
                 }
