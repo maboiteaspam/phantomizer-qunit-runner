@@ -19,10 +19,10 @@ module.exports = function(grunt) {
 
         var q_options = {
             all:{
-                force:true,
-                test_scripts_base_url:"/js/tests/",
-                inject:null, // no need to inject scripts here, we will do it by our own in the browser by the browser
                 options: {
+                    force:true,
+                    test_scripts_base_url:"/js/tests/",
+                    inject:null, // no need to inject scripts here, we will do it by our own in the browser by the browser
                     urls: []
                 }
             }
