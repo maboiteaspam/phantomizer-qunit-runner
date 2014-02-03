@@ -9,7 +9,7 @@ module.exports = function(grunt) {
   grunt.registerMultiTask("phantomizer-qunit-runner",
     "Executes qunit tests in phantomjs", function () {
 
-
+      // loads dependencies
       var webserver = ph_libutil.webserver;
       var router_factory = ph_libutil.router;
       var optimizer_factory = ph_libutil.optimizer;
@@ -17,6 +17,7 @@ module.exports = function(grunt) {
 
       var grunt_config = grunt.config.get();
 
+      // Default options
       var options = this.options({
         urls:[],
         paths:[],
@@ -28,6 +29,7 @@ module.exports = function(grunt) {
       });
       grunt.verbose.writeflags(options, 'Options');
 
+      // grunt-contrib-qunit options
       var q_options = {
         all:{
           options: {
@@ -40,18 +42,22 @@ module.exports = function(grunt) {
         }
       };
 
+      // this task is async
       var done = this.async();
 
+      // adjust the base_url to /some/path/
+      var base_url = options.base_url;
+      if( base_url.substring(base_url.length-1) == "/" ){
+        base_url = base_url.substring(0, base_url.length-1)
+      }
+
+      // initialize router by loading urls
       var router = new router_factory(grunt_config.routing);
       router.load(function(){
 
-        var base_url = options.base_url;
-        if( base_url.substring(base_url.length-1) == "/" ){
-          base_url = base_url.substring(0, base_url.length-1)
-        }
-
         grunt.log.ok("Building tests url")
 
+        // collect urls to fetch for testing
         var urls = [];
         if( options.urls && options.urls.length > 0 ){
           urls = collect_urls_from_options(options);
@@ -59,6 +65,9 @@ module.exports = function(grunt) {
           urls = collect_urls_from_config(grunt_config);
         }
 
+        // parse test module urls
+        // into a query string
+        // push them to qunit options
         for( var url in urls ){
           var tests = urls[url];
           if( tests.length == 0 ){
@@ -73,8 +82,13 @@ module.exports = function(grunt) {
           }
         }
 
+        // if any suitable test url id found
         if( q_options.all.options.urls.length > 0 ){
 
+          // set quint task options
+          grunt.config.set("qunit", q_options);
+
+          // starts a new phantomizer webserver
           var meta_manager = new meta_factory(process.cwd(), grunt_config.meta_dir);
           var optimizer = new optimizer_factory(meta_manager, grunt_config, grunt);
           grunt_config.web_paths = options.paths;
@@ -85,18 +99,24 @@ module.exports = function(grunt) {
           webserver.enable_assets_inject(options.inject_assets);
           webserver.start(options.port, options.ssl_port);
 
+          // register a new stop task to end the webserver after qunit task
           grunt.registerTask('stop', 'Stop the webserver.', function() {
             webserver.stop();
           });
 
+          // install some more logger from phantomjs
           grunt.event.on('qunit.error.onError', function (message, stackTrace) {
             if( stackTrace[0] && !stackTrace[0].file.match(/grunt-contrib-qunit\/phantomjs\/bridge[.]js$/))
               grunt.log.ok("error.onError: " ,stackTrace);
           });
 
-          grunt.config.set("qunit", q_options);
-          grunt.task.run(["qunit","stop"])
+          // execute qunit, then stop webserver
+          grunt.task.run(["qunit","stop"]);
+
+        }else{
+          grunt.log.error("No urls found to run any tests.");
         }
+        // Done
         done();
       });
     });
