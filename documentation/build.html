@@ -58,14 +58,40 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
         <p>Default options</p>
 
         
-          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> options = <span class="hljs-keyword">this</span>.options({
-        urls:[],
-        paths:[],
-        inject_assets:<span class="hljs-literal">false</span>,
+          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> options = <span class="hljs-keyword">this</span>.options({</pre></div>
+        
+      
+        
+        <p>relative or absolute urls to run</p>
+
+        
+          <div class='highlight'><pre>        urls:[],</pre></div>
+        
+      
+        
+        <p>paths to use for local webserver</p>
+
+        
+          <div class='highlight'><pre>        paths:[],</pre></div>
+        
+      
+        
+        <p>if it is already build, no need to inject assets again</p>
+
+        
+          <div class='highlight'><pre>        inject_assets:<span class="hljs-literal">false</span>,
         base_url:<span class="hljs-string">""</span>,
         port:<span class="hljs-string">""</span>,
         ssl_port:<span class="hljs-string">""</span>,
-        junitDir:<span class="hljs-literal">null</span>
+        qunit_version:<span class="hljs-string">"1.13.0"</span>,
+        junitDir:<span class="hljs-literal">null</span>,</pre></div>
+        
+      
+        
+        <p>pause the execution for debug</p>
+
+        
+          <div class='highlight'><pre>        pause:<span class="hljs-literal">false</span>
       });
       grunt.verbose.writeflags(options, <span class="hljs-string">'Options'</span>);</pre></div>
         
@@ -86,7 +112,7 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
         
           <div class='highlight'><pre>            inject:<span class="hljs-literal">null</span>,
             urls: [],
-            junitDir:<span class="hljs-literal">null</span>
+            junitDir:options.junitDir
           }
         }
       };</pre></div>
@@ -183,6 +209,12 @@ push them to qunit options</p>
           webserver.enable_dashboard(<span class="hljs-literal">false</span>);
           webserver.enable_build(<span class="hljs-literal">false</span>);
           webserver.enable_assets_inject(options.inject_assets);
+          webserver.inject_globals({
+            qunit:{
+              version:options.qunit_version,
+              bridge:options.junitDir ? <span class="hljs-string">"phantomjs-junit-bridge"</span> : <span class="hljs-string">"phantomjs-bridge"</span>
+            }
+          });
           webserver.start(options.port, options.ssl_port);</pre></div>
         
       
@@ -191,7 +223,13 @@ push them to qunit options</p>
 
         
           <div class='highlight'><pre>          grunt.registerTask(<span class="hljs-string">'stop'</span>, <span class="hljs-string">'Stop the webserver.'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
-            webserver.stop();
+            <span class="hljs-keyword">if</span>( options.pause ){
+              readline_toquit(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+                webserver.stop();
+              })
+            }<span class="hljs-keyword">else</span>{
+              webserver.stop();
+            }
           });</pre></div>
         
       
@@ -265,6 +303,26 @@ push them to qunit options</p>
       urls[url] = tests;
     }
     <span class="hljs-keyword">return</span> urls;
+  }
+
+  <span class="hljs-comment">/**
+   * Waits for user to press Enter key,
+   * kills remaining webserver,
+   * exit
+   *
+   * @param end_handler
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readline_toquit</span><span class="hljs-params">( end_handler )</span>{</span>
+
+    <span class="hljs-keyword">var</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">'readline'</span>)
+    <span class="hljs-keyword">var</span> rl = readline.createInterface(process.stdin, process.stdout);
+
+    rl.question(<span class="hljs-string">'Press enter to leave...\n'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(answer)</span> {</span>
+      grunt.log.subhead(<span class="hljs-string">'See you soon !'</span>);
+      <span class="hljs-keyword">if</span>( end_handler != <span class="hljs-literal">null</span> ){
+        end_handler()
+      }
+    });
   }
 };</pre></div>
         
