@@ -4,7 +4,11 @@ module.exports = function(grunt) {
 
   var ph_libutil = require("phantomizer-libutil");
 
-  grunt.registerMultiTask("phantomizer-qunit-runner", "", function () {
+  // Qunit task for phantomizer
+  // ---------
+  grunt.registerMultiTask("phantomizer-qunit-runner",
+    "Executes qunit tests in phantomjs", function () {
+
 
     var webserver = ph_libutil.webserver;
     var router_factory = ph_libutil.router;
@@ -21,14 +25,15 @@ module.exports = function(grunt) {
       port:"",
       ssl_port:"",
       junitDir:null
-    })
+    });
     grunt.verbose.writeflags(options, 'Options');
 
     var q_options = {
       all:{
         options: {
           force:true,
-          inject:null, // no need to inject scripts here, we will inject it by our own in the server, and get it loaded/executed by the browser
+          // always null, phantomizer handles it
+          inject:null,
           urls: [],
           junitDir:null
         }
