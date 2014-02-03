@@ -21,9 +21,9 @@ module.exports = function(grunt) {
             all:{
                 options: {
                     force:true,
-                    test_scripts_base_url:"/js/tests/",
-                    inject:null, // no need to inject scripts here, we will do it by our own in the browser by the browser
-                    urls: []
+                    inject:null, // no need to inject scripts here, we will inject it by our own in the server, and get it loaded/executed by the browser
+                    urls: [],
+                    junitDir:null
                 }
             }
         }
@@ -33,13 +33,13 @@ module.exports = function(grunt) {
             inject_assets:false,
             base_url:"",
             port:"",
-            ssl_port:""
+            ssl_port:"",
+            junitDir:null
         })
         grunt.verbose.writeflags(options, 'Options');
 
         var done = this.async();
         router.load(function(){
-
 
             grunt_config.log = false;
             grunt_config.web_paths = options.paths;
