@@ -57,65 +57,79 @@ module.exports = function(grunt) {
                 base_url = base_url.substring(0, base_url.length-1)
             }
 
-            grunt.log.ok("Building testing urls")
+            grunt.log.ok("Building tests url")
 
+          var urls = [];
             if( options.urls && options.urls.length > 0 ){
-                for( var url in options.urls ){
-                    var tests = options.urls[url];
-                    for( var nn in tests ){
-                        var t = tests[nn];
-                        t = t.replace("//","/");
-                        tests.push(t);
-                    }
-                    tests = tests.join(",");
-
-                    url = base_url+url;
-                    url = url+(url.indexOf("?")>-1?"&":"?");
-                    url = url+"spec_files="+tests;
-                    //url = url+"&no_dashboard=true"; under windows the & makes bug
-                    q_options.all.options.urls.push( url );
-                }
+              urls = collect_urls_from_options(options);
             }else if ( grunt_config.routing ){
-                for( var n in grunt_config.routing ){
-                    var route = grunt_config.routing[n];
-
-                    var url = route.template;
-                    if( route.test_url ){
-                        url = route.test_url;
-                    }
-                    var tests = [];
-                    for( var nn in route.tests ){
-                        var t = route.tests[nn];
-                        t = t.replace("//","/");
-                        tests.push(t);
-                    }
-                    tests = tests.join(",");
-
-                    if( tests.length == 0 ){
-                        grunt.log.warn("Mising tests for url "+url)
-                    }else{
-                        url = base_url+url;
-                        url = url+(url.indexOf("?")>-1?"&":"?");
-                        url = url+"spec_files="+tests;
-                        //url = url+"&no_dashboard=true"; under windows the & makes bug
-                        q_options.all.options.urls.push( url );
-                    }
-
-                }
+              urls = collect_urls_from_config(grunt_config);
             }
 
+          for( var url in urls ){
+            var tests = urls[url];
+            if( tests.length == 0 ){
+              grunt.log.warn("Missing tests for "+url)
+            }else{
+              tests = tests.join(",");
+              url = base_url+url;
+              url = url+(url.indexOf("?")>-1?"&":"?");
+              url = url+"spec_files="+tests;
+              //url = url+"&no_dashboard=true"; under windows the & makes bug
+              q_options.all.options.urls.push( url );
+            }
+          }
+
+          if( q_options.all.options.urls.length > 0 ){
             grunt.registerTask('stop', 'Stop the webserver.', function() {
-                webserver.stop();
+              webserver.stop();
             });
 
             grunt.event.on('qunit.error.onError', function (message, stackTrace) {
-                if( stackTrace[0] && !stackTrace[0].file.match(/grunt-contrib-qunit\/phantomjs\/bridge[.]js$/))
-                    grunt.log.ok("error.onError: " ,stackTrace);
+              if( stackTrace[0] && !stackTrace[0].file.match(/grunt-contrib-qunit\/phantomjs\/bridge[.]js$/))
+                grunt.log.ok("error.onError: " ,stackTrace);
             });
 
             grunt.config.set("qunit", q_options);
             grunt.task.run(["qunit","stop"])
+          }
             done();
         });
     });
+
+  // helper functions
+  // -----------
+  function collect_urls_from_options(options){
+    var urls = {};
+    for( var url in options.urls ){
+      var tests = options.urls[url];
+      for( var nn in tests ){
+        var t = tests[nn];
+        t = t.replace("//","/").replace("\\","/");
+        tests.push(t);
+      }
+      urls[url] = tests;
+    }
+    return urls;
+  }
+  function collect_urls_from_config(grunt_config){
+    var urls = {};
+    for( var n in grunt_config.routing ){
+      var route = grunt_config.routing[n];
+
+      var url = route.template;
+      if( route.test_url ){
+        url = route.test_url;
+      }
+
+      var tests = [];
+      for( var nn in route.tests ){
+        var t = route.tests[nn];
+        t = t.replace("//","/").replace("\\","/");
+        tests.push(t);
+      }
+      urls[url] = tests;
+    }
+    return urls;
+  }
 };
