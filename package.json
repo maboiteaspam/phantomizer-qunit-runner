@@ -15,7 +15,7 @@
     },
     "dependencies": {
         "grunt": "0.4.x",
-        "grunt-contrib-qunit": "0.3.x",
+        "grunt-contrib-qunit": "maboiteaspam/grunt-contrib-qunit",
         "phantomizer-libutil": "git://github.com/maboiteaspam/phantomizer-libutil.git"
     }
 }
