@@ -19,13 +19,19 @@ module.exports = function(grunt) {
 
       // Default options
       var options = this.options({
+        // relative or absolute urls to run
         urls:[],
+        // paths to use for local webserver
         paths:[],
+        // if it is already build, no need to inject assets again
         inject_assets:false,
         base_url:"",
         port:"",
         ssl_port:"",
-        junitDir:null
+        qunit_version:"1.13.0",
+        junitDir:null,
+        // pause the execution for debug
+        pause:false
       });
       grunt.verbose.writeflags(options, 'Options');
 
@@ -37,7 +43,7 @@ module.exports = function(grunt) {
             // always null, phantomizer handles it
             inject:null,
             urls: [],
-            junitDir:null
+            junitDir:options.junitDir
           }
         }
       };
@@ -97,11 +103,23 @@ module.exports = function(grunt) {
           webserver.enable_dashboard(false);
           webserver.enable_build(false);
           webserver.enable_assets_inject(options.inject_assets);
+          webserver.inject_globals({
+            qunit:{
+              version:options.qunit_version,
+              bridge:options.junitDir ? "phantomjs-junit-bridge" : "phantomjs-bridge"
+            }
+          });
           webserver.start(options.port, options.ssl_port);
 
           // register a new stop task to end the webserver after qunit task
           grunt.registerTask('stop', 'Stop the webserver.', function() {
-            webserver.stop();
+            if( options.pause ){
+              readline_toquit(function(){
+                webserver.stop();
+              })
+            }else{
+              webserver.stop();
+            }
           });
 
           // install some more logger from phantomjs
@@ -155,5 +173,25 @@ module.exports = function(grunt) {
       urls[url] = tests;
     }
     return urls;
+  }
+
+  /**
+   * Waits for user to press Enter key,
+   * kills remaining webserver,
+   * exit
+   *
+   * @param end_handler
+   */
+  function readline_toquit( end_handler ){
+
+    var readline = require('readline')
+    var rl = readline.createInterface(process.stdin, process.stdout);
+
+    rl.question('Press enter to leave...\n', function(answer) {
+      grunt.log.subhead('See you soon !');
+      if( end_handler != null ){
+        end_handler()
+      }
+    });
   }
 };
