@@ -7,26 +7,12 @@ module.exports = function(grunt) {
     grunt.registerMultiTask("phantomizer-qunit-runner", "", function () {
 
         var webserver = ph_libutil.webserver;
-
         var router_factory = ph_libutil.router;
         var optimizer_factory = ph_libutil.optimizer;
         var meta_factory = ph_libutil.meta;
 
         var grunt_config = grunt.config.get();
-        var meta_manager = new meta_factory(process.cwd(), grunt_config.meta_dir)
-        var optimizer = new optimizer_factory(meta_manager, grunt_config, grunt)
-        var router = new router_factory(grunt_config.routing);
 
-        var q_options = {
-            all:{
-                options: {
-                    force:true,
-                    inject:null, // no need to inject scripts here, we will inject it by our own in the server, and get it loaded/executed by the browser
-                    urls: [],
-                    junitDir:null
-                }
-            }
-        }
         var options = this.options({
             urls:[],
             paths:[],
@@ -38,21 +24,23 @@ module.exports = function(grunt) {
         })
         grunt.verbose.writeflags(options, 'Options');
 
+      var q_options = {
+        all:{
+          options: {
+            force:true,
+            inject:null, // no need to inject scripts here, we will inject it by our own in the server, and get it loaded/executed by the browser
+            urls: [],
+            junitDir:null
+          }
+        }
+      };
+
         var done = this.async();
+
+      var router = new router_factory(grunt_config.routing);
         router.load(function(){
 
-            grunt_config.log = false;
-            grunt_config.web_paths = options.paths;
-
-            webserver = new webserver(router,optimizer,meta_manager,process.cwd(), grunt_config, grunt);
-            webserver.is_phantom(true);
-            webserver.enable_dashboard(false);
-            webserver.enable_build(false);
-            webserver.enable_assets_inject(options.inject_assets);
-            webserver.start(options.port, options.ssl_port);
-
             var base_url = options.base_url;
-
             if( base_url.substring(base_url.length-1) == "/" ){
                 base_url = base_url.substring(0, base_url.length-1)
             }
@@ -81,6 +69,17 @@ module.exports = function(grunt) {
           }
 
           if( q_options.all.options.urls.length > 0 ){
+
+            var meta_manager = new meta_factory(process.cwd(), grunt_config.meta_dir);
+            var optimizer = new optimizer_factory(meta_manager, grunt_config, grunt);
+            grunt_config.web_paths = options.paths;
+            webserver = new webserver(router,optimizer,meta_manager,process.cwd(), grunt_config, grunt);
+            webserver.is_phantom(true);
+            webserver.enable_dashboard(false);
+            webserver.enable_build(false);
+            webserver.enable_assets_inject(options.inject_assets);
+            webserver.start(options.port, options.ssl_port);
+
             grunt.registerTask('stop', 'Stop the webserver.', function() {
               webserver.stop();
             });
