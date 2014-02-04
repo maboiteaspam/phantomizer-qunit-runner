@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     "Executes qunit tests in phantomjs", function () {
 
       // loads dependencies
-      var webserver = ph_libutil.webserver;
+      var webserver_factory = ph_libutil.webserver;
       var router_factory = ph_libutil.router;
       var optimizer_factory = ph_libutil.optimizer;
       var meta_factory = ph_libutil.meta;
@@ -97,8 +97,7 @@ module.exports = function(grunt) {
           // starts a new phantomizer webserver
           var meta_manager = new meta_factory(process.cwd(), grunt_config.meta_dir);
           var optimizer = new optimizer_factory(meta_manager, grunt_config, grunt);
-          grunt_config.web_paths = options.paths;
-          webserver = new webserver(router,optimizer,meta_manager,process.cwd(), grunt_config, grunt);
+          var webserver = new webserver_factory(router,optimizer,meta_manager,grunt, options.paths);
           webserver.is_phantom(true);
           webserver.enable_dashboard(false);
           webserver.enable_build(false);
