@@ -45,7 +45,7 @@ module.exports = function(grunt) {
             inject:null,
             urls: [],
             outputDir:options.outputDir,
-            format:null
+            format:options.format
           }
         }
       };
