@@ -113,13 +113,19 @@ module.exports = function(grunt) {
           webserver.start(options.port, options.ssl_port);
 
           // register a new stop task to end the webserver after qunit task
-          grunt.registerTask('stop', 'Stop the webserver.', function() {
+          grunt.registerTask('stop', 'Stop the webserver.', function(done) {
             if( options.pause ){
               readline_toquit(function(){
-                webserver.stop();
+                webserver.stop(function(){
+                  grunt.log.subhead('See you soon !');
+                  done();
+                });
               })
             }else{
-              webserver.stop();
+              webserver.stop(function(){
+                grunt.log.subhead('See you soon !');
+                done();
+              });
             }
           });
 
@@ -189,7 +195,6 @@ module.exports = function(grunt) {
     var rl = readline.createInterface(process.stdin, process.stdout);
 
     rl.question('Press enter to leave...\n', function(answer) {
-      grunt.log.subhead('See you soon !');
       if( end_handler != null ){
         end_handler()
       }
