@@ -29,7 +29,8 @@ module.exports = function(grunt) {
         port:"",
         ssl_port:"",
         qunit_version:"1.13.0",
-        junitDir:null,
+        format:null,
+        outputDir:null,
         // pause the execution for debug
         pause:false
       });
@@ -43,7 +44,8 @@ module.exports = function(grunt) {
             // always null, phantomizer handles it
             inject:null,
             urls: [],
-            junitDir:options.junitDir
+            outputDir:options.outputDir,
+            format:null
           }
         }
       };
@@ -105,7 +107,7 @@ module.exports = function(grunt) {
           webserver.inject_globals({
             qunit:{
               version:options.qunit_version,
-              bridge:options.junitDir ? "phantomjs-junit-bridge" : "phantomjs-bridge"
+              bridge:options.outputDir ? "phantomjs-junit-bridge" : "phantomjs-bridge"
             }
           });
           webserver.start(options.port, options.ssl_port);
