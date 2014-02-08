@@ -195,6 +195,7 @@ module.exports = function(grunt) {
     var rl = readline.createInterface(process.stdin, process.stdout);
 
     rl.question('Press enter to leave...\n', function(answer) {
+      rl.close();
       if( end_handler != null ){
         end_handler()
       }
