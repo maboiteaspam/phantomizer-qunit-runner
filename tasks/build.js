@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       var router = new router_factory(grunt_config.routing);
       router.load(function(){
 
-        grunt.log.ok("Building tests url")
+        grunt.log.ok("Building tests url");
 
         // collect urls to fetch for testing
         var urls = [];
@@ -96,6 +96,14 @@ module.exports = function(grunt) {
           // set quint task options
           grunt.config.set("qunit", q_options);
 
+          // get the right bridge
+          var bridge = "phantomjs-bridge";
+          if(options.format == "junit"){
+            bridge = "phantomjs-junit-bridge";
+          }else if(options.format == "tap"){
+            bridge = "phantomjs-tap-bridge";
+          }
+
           // starts a new phantomizer webserver
           var meta_manager = new meta_factory(process.cwd(), grunt_config.meta_dir);
           var optimizer = new optimizer_factory(meta_manager, grunt_config, grunt);
@@ -107,7 +115,7 @@ module.exports = function(grunt) {
           webserver.inject_globals({
             qunit:{
               version:options.qunit_version,
-              bridge:options.outputDir ? "phantomjs-junit-bridge" : "phantomjs-bridge"
+              bridge:bridge
             }
           });
           webserver.start(options.port, options.ssl_port);
