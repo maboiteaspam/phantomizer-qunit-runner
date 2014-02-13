@@ -46,7 +46,7 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
         <p>loads dependencies</p>
 
         
-          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> webserver = ph_libutil.webserver;
+          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> webserver_factory = ph_libutil.webserver;
       <span class="hljs-keyword">var</span> router_factory = ph_libutil.router;
       <span class="hljs-keyword">var</span> optimizer_factory = ph_libutil.optimizer;
       <span class="hljs-keyword">var</span> meta_factory = ph_libutil.meta;
@@ -84,7 +84,8 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
         port:<span class="hljs-string">""</span>,
         ssl_port:<span class="hljs-string">""</span>,
         qunit_version:<span class="hljs-string">"1.13.0"</span>,
-        junitDir:<span class="hljs-literal">null</span>,</pre></div>
+        format:<span class="hljs-literal">null</span>,
+        outputDir:<span class="hljs-literal">null</span>,</pre></div>
         
       
         
@@ -112,7 +113,8 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
         
           <div class='highlight'><pre>            inject:<span class="hljs-literal">null</span>,
             urls: [],
-            junitDir:options.junitDir
+            outputDir:options.outputDir,
+            format:options.format
           }
         }
       };</pre></div>
@@ -142,7 +144,7 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
           <div class='highlight'><pre>      <span class="hljs-keyword">var</span> router = <span class="hljs-keyword">new</span> router_factory(grunt_config.routing);
       router.load(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
 
-        grunt.log.ok(<span class="hljs-string">"Building tests url"</span>)</pre></div>
+        grunt.log.ok(<span class="hljs-string">"Building tests url"</span>);</pre></div>
         
       
         
@@ -198,13 +200,24 @@ push them to qunit options</p>
         
       
         
+        <p>get the right bridge</p>
+
+        
+          <div class='highlight'><pre>          <span class="hljs-keyword">var</span> bridge = <span class="hljs-string">"phantomjs-bridge"</span>;
+          <span class="hljs-keyword">if</span>(options.format == <span class="hljs-string">"junit"</span>){
+            bridge = <span class="hljs-string">"phantomjs-junit-bridge"</span>;
+          }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(options.format == <span class="hljs-string">"tap"</span>){
+            bridge = <span class="hljs-string">"phantomjs-tap-bridge"</span>;
+          }</pre></div>
+        
+      
+        
         <p>starts a new phantomizer webserver</p>
 
         
           <div class='highlight'><pre>          <span class="hljs-keyword">var</span> meta_manager = <span class="hljs-keyword">new</span> meta_factory(process.cwd(), grunt_config.meta_dir);
           <span class="hljs-keyword">var</span> optimizer = <span class="hljs-keyword">new</span> optimizer_factory(meta_manager, grunt_config, grunt);
-          grunt_config.web_paths = options.paths;
-          webserver = <span class="hljs-keyword">new</span> webserver(router,optimizer,meta_manager,process.cwd(), grunt_config, grunt);
+          <span class="hljs-keyword">var</span> webserver = <span class="hljs-keyword">new</span> webserver_factory(router,optimizer,meta_manager,grunt, options.paths);
           webserver.is_phantom(<span class="hljs-literal">true</span>);
           webserver.enable_dashboard(<span class="hljs-literal">false</span>);
           webserver.enable_build(<span class="hljs-literal">false</span>);
@@ -212,7 +225,7 @@ push them to qunit options</p>
           webserver.inject_globals({
             qunit:{
               version:options.qunit_version,
-              bridge:options.junitDir ? <span class="hljs-string">"phantomjs-junit-bridge"</span> : <span class="hljs-string">"phantomjs-bridge"</span>
+              bridge:bridge
             }
           });
           webserver.start(options.port, options.ssl_port);</pre></div>
@@ -222,13 +235,19 @@ push them to qunit options</p>
         <p>register a new stop task to end the webserver after qunit task</p>
 
         
-          <div class='highlight'><pre>          grunt.registerTask(<span class="hljs-string">'stop'</span>, <span class="hljs-string">'Stop the webserver.'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+          <div class='highlight'><pre>          grunt.registerTask(<span class="hljs-string">'stop'</span>, <span class="hljs-string">'Stop the webserver.'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(done)</span> {</span>
             <span class="hljs-keyword">if</span>( options.pause ){
               readline_toquit(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
-                webserver.stop();
+                webserver.stop(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+                  grunt.log.subhead(<span class="hljs-string">'See you soon !'</span>);
+                  done();
+                });
               })
             }<span class="hljs-keyword">else</span>{
-              webserver.stop();
+              webserver.stop(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+                grunt.log.subhead(<span class="hljs-string">'See you soon !'</span>);
+                done();
+              });
             }
           });</pre></div>
         
@@ -318,7 +337,7 @@ push them to qunit options</p>
     <span class="hljs-keyword">var</span> rl = readline.createInterface(process.stdin, process.stdout);
 
     rl.question(<span class="hljs-string">'Press enter to leave...\n'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(answer)</span> {</span>
-      grunt.log.subhead(<span class="hljs-string">'See you soon !'</span>);
+      rl.close();
       <span class="hljs-keyword">if</span>( end_handler != <span class="hljs-literal">null</span> ){
         end_handler()
       }
