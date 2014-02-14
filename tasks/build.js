@@ -84,7 +84,8 @@ module.exports = function(grunt) {
         grunt.config.set("qunit", q_options);
 
 // get phantomizer main instance
-        var phantomizer = ph_libutil.get("main");
+        var Phantomizer = ph_libutil.Phantomizer;
+        var phantomizer = new Phantomizer(process.cwd(),grunt);
         phantomizer.create_webserver(options.paths,function(webserver){
           // get the right bridge
           var bridge = "phantomjs-bridge";
