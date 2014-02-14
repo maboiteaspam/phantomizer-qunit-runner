@@ -39,17 +39,7 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
         
         
           <div class='highlight'><pre>  grunt.registerMultiTask(<span class="hljs-string">"phantomizer-qunit-runner"</span>,
-    <span class="hljs-string">"Executes qunit tests in phantomjs"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span></pre></div>
-        
-      
-        
-        <p>loads dependencies</p>
-
-        
-          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> webserver_factory = ph_libutil.webserver;
-      <span class="hljs-keyword">var</span> router_factory = ph_libutil.router;
-      <span class="hljs-keyword">var</span> optimizer_factory = ph_libutil.optimizer;
-      <span class="hljs-keyword">var</span> meta_factory = ph_libutil.meta;
+    <span class="hljs-string">"Executes qunit tests in phantomjs"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
 
       <span class="hljs-keyword">var</span> grunt_config = grunt.config.get();</pre></div>
         
@@ -121,42 +111,27 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
         
       
         
-        <p>this task is async</p>
-
-        
-          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> done = <span class="hljs-keyword">this</span>.async();</pre></div>
-        
-      
-        
         <p>adjust the base_url to /some/path/</p>
 
         
           <div class='highlight'><pre>      <span class="hljs-keyword">var</span> base_url = options.base_url;
       <span class="hljs-keyword">if</span>( base_url.substring(base_url.length-<span class="hljs-number">1</span>) == <span class="hljs-string">"/"</span> ){
         base_url = base_url.substring(<span class="hljs-number">0</span>, base_url.length-<span class="hljs-number">1</span>)
-      }</pre></div>
-        
-      
-        
-        <p>initialize router by loading urls</p>
+      }
 
-        
-          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> router = <span class="hljs-keyword">new</span> router_factory(grunt_config.routing);
-      router.load(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
-
-        grunt.log.ok(<span class="hljs-string">"Building tests url"</span>);</pre></div>
+      grunt.log.ok(<span class="hljs-string">"Building tests url"</span>);</pre></div>
         
       
         
         <p>collect urls to fetch for testing</p>
 
         
-          <div class='highlight'><pre>        <span class="hljs-keyword">var</span> urls = [];
-        <span class="hljs-keyword">if</span>( options.urls &amp;&amp; options.urls.length &gt; <span class="hljs-number">0</span> ){
-          urls = collect_urls_from_options(options);
-        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( grunt_config.routing ){
-          urls = collect_urls_from_config(grunt_config);
-        }</pre></div>
+          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> urls = [];
+      <span class="hljs-keyword">if</span>( options.urls &amp;&amp; options.urls.length &gt; <span class="hljs-number">0</span> ){
+        urls = collect_urls_from_options(options);
+      }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( grunt_config.routing ){
+        urls = collect_urls_from_config(grunt_config);
+      }</pre></div>
         
       
         
@@ -165,38 +140,46 @@ into a query string
 push them to qunit options</p>
 
         
-          <div class='highlight'><pre>        <span class="hljs-keyword">for</span>( <span class="hljs-keyword">var</span> url <span class="hljs-keyword">in</span> urls ){
-          <span class="hljs-keyword">var</span> tests = urls[url];
-          <span class="hljs-keyword">if</span>( tests.length == <span class="hljs-number">0</span> ){
-            grunt.log.warn(<span class="hljs-string">"Missing tests for "</span>+url)
-          }<span class="hljs-keyword">else</span>{
-            tests = tests.join(<span class="hljs-string">","</span>);
-            url = base_url+url;
-            url = url+(url.indexOf(<span class="hljs-string">"?"</span>)&gt;-<span class="hljs-number">1</span>?<span class="hljs-string">"&amp;"</span>:<span class="hljs-string">"?"</span>);
-            url = url+<span class="hljs-string">"spec_files="</span>+tests;</pre></div>
+          <div class='highlight'><pre>      <span class="hljs-keyword">for</span>( <span class="hljs-keyword">var</span> url <span class="hljs-keyword">in</span> urls ){
+        <span class="hljs-keyword">var</span> tests = urls[url];
+        <span class="hljs-keyword">if</span>( tests.length == <span class="hljs-number">0</span> ){
+          grunt.log.warn(<span class="hljs-string">"Missing tests for "</span>+url)
+        }<span class="hljs-keyword">else</span>{
+          tests = tests.join(<span class="hljs-string">","</span>);
+          url = base_url+url;
+          url = url+(url.indexOf(<span class="hljs-string">"?"</span>)&gt;-<span class="hljs-number">1</span>?<span class="hljs-string">"&amp;"</span>:<span class="hljs-string">"?"</span>);
+          url = url+<span class="hljs-string">"spec_files="</span>+tests;</pre></div>
         
       
         
         <p>url = url+”&amp;no_dashboard=true”; under windows the &amp; makes bug</p>
 
         
-          <div class='highlight'><pre>            q_options.all.options.urls.push( url );
-          }
-        }</pre></div>
+          <div class='highlight'><pre>          q_options.all.options.urls.push( url );
+        }
+      }</pre></div>
         
       
         
         <p>if any suitable test url id found</p>
 
         
-          <div class='highlight'><pre>        <span class="hljs-keyword">if</span>( q_options.all.options.urls.length &gt; <span class="hljs-number">0</span> ){</pre></div>
+          <div class='highlight'><pre>      <span class="hljs-keyword">if</span>( q_options.all.options.urls.length &gt; <span class="hljs-number">0</span> ){</pre></div>
         
       
         
         <p>set quint task options</p>
 
         
-          <div class='highlight'><pre>          grunt.config.set(<span class="hljs-string">"qunit"</span>, q_options);</pre></div>
+          <div class='highlight'><pre>        grunt.config.set(<span class="hljs-string">"qunit"</span>, q_options);</pre></div>
+        
+      
+        
+        <p>get phantomizer main instance</p>
+
+        
+          <div class='highlight'><pre>        <span class="hljs-keyword">var</span> phantomizer = ph_libutil.get(<span class="hljs-string">"main"</span>);
+        phantomizer.create_webserver(options.paths,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(webserver)</span>{</span></pre></div>
         
       
         
@@ -208,16 +191,7 @@ push them to qunit options</p>
             bridge = <span class="hljs-string">"phantomjs-junit-bridge"</span>;
           }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(options.format == <span class="hljs-string">"tap"</span>){
             bridge = <span class="hljs-string">"phantomjs-tap-bridge"</span>;
-          }</pre></div>
-        
-      
-        
-        <p>starts a new phantomizer webserver</p>
-
-        
-          <div class='highlight'><pre>          <span class="hljs-keyword">var</span> meta_manager = <span class="hljs-keyword">new</span> meta_factory(process.cwd(), grunt_config.meta_dir);
-          <span class="hljs-keyword">var</span> optimizer = <span class="hljs-keyword">new</span> optimizer_factory(meta_manager, grunt_config, grunt);
-          <span class="hljs-keyword">var</span> webserver = <span class="hljs-keyword">new</span> webserver_factory(router,optimizer,meta_manager,grunt, options.paths);
+          }
           webserver.is_phantom(<span class="hljs-literal">true</span>);
           webserver.enable_dashboard(<span class="hljs-literal">false</span>);
           webserver.enable_build(<span class="hljs-literal">false</span>);
@@ -268,17 +242,11 @@ push them to qunit options</p>
         
           <div class='highlight'><pre>          grunt.task.run([<span class="hljs-string">"qunit"</span>,<span class="hljs-string">"stop"</span>]);
 
-        }<span class="hljs-keyword">else</span>{
-          grunt.log.error(<span class="hljs-string">"No urls found to run any tests."</span>);
-        }</pre></div>
-        
-      
-        
-        <p>Done</p>
+        });
+      }<span class="hljs-keyword">else</span>{
+        grunt.log.error(<span class="hljs-string">"No urls found to run any tests."</span>);
+      }
 
-        
-          <div class='highlight'><pre>        done();
-      });
     });</pre></div>
         
       
@@ -333,7 +301,7 @@ push them to qunit options</p>
    */</span>
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readline_toquit</span><span class="hljs-params">( end_handler )</span>{</span>
 
-    <span class="hljs-keyword">var</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">'readline'</span>)
+    <span class="hljs-keyword">var</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">'readline'</span>);
     <span class="hljs-keyword">var</span> rl = readline.createInterface(process.stdin, process.stdout);
 
     rl.question(<span class="hljs-string">'Press enter to leave...\n'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(answer)</span> {</span>
