@@ -117,16 +117,14 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
           <div class='highlight'><pre>      <span class="hljs-keyword">var</span> base_url = options.base_url;
       <span class="hljs-keyword">if</span>( base_url.substring(base_url.length-<span class="hljs-number">1</span>) == <span class="hljs-string">"/"</span> ){
         base_url = base_url.substring(<span class="hljs-number">0</span>, base_url.length-<span class="hljs-number">1</span>)
-      }
-
-      grunt.log.ok(<span class="hljs-string">"Building tests url"</span>);</pre></div>
+      }</pre></div>
         
       
         
         <p>collect urls to fetch for testing</p>
 
         
-          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> urls = [];
+          <div class='highlight'><pre>      <span class="hljs-keyword">var</span> urls = {};
       <span class="hljs-keyword">if</span>( options.urls &amp;&amp; options.urls.length &gt; <span class="hljs-number">0</span> ){
         urls = collect_urls_from_options(options);
       }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( grunt_config.routing ){
@@ -157,14 +155,22 @@ push them to qunit options</p>
         
           <div class='highlight'><pre>          q_options.all.options.urls.push( url );
         }
-      }</pre></div>
+      }
+
+      grunt.log.ok(<span class="hljs-string">"Found "</span>+q_options.all.options.urls.length+<span class="hljs-string">" url to tests"</span>);</pre></div>
         
       
         
         <p>if any suitable test url id found</p>
 
         
-          <div class='highlight'><pre>      <span class="hljs-keyword">if</span>( q_options.all.options.urls.length &gt; <span class="hljs-number">0</span> ){</pre></div>
+          <div class='highlight'><pre>      <span class="hljs-keyword">if</span>( q_options.all.options.urls.length == <span class="hljs-number">0</span> ){
+
+        grunt.log.error(<span class="hljs-string">"No urls found to run any tests."</span>);
+
+      }<span class="hljs-keyword">else</span>{
+
+        <span class="hljs-keyword">var</span> done = <span class="hljs-keyword">this</span>.async();</pre></div>
         
       
         
@@ -178,7 +184,8 @@ push them to qunit options</p>
         <p>get phantomizer main instance</p>
 
         
-          <div class='highlight'><pre>        <span class="hljs-keyword">var</span> phantomizer = ph_libutil.get(<span class="hljs-string">"main"</span>);
+          <div class='highlight'><pre>        <span class="hljs-keyword">var</span> Phantomizer = ph_libutil.Phantomizer;
+        <span class="hljs-keyword">var</span> phantomizer = <span class="hljs-keyword">new</span> Phantomizer(process.cwd(),grunt);
         phantomizer.create_webserver(options.paths,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(webserver)</span>{</span></pre></div>
         
       
@@ -242,9 +249,8 @@ push them to qunit options</p>
         
           <div class='highlight'><pre>          grunt.task.run([<span class="hljs-string">"qunit"</span>,<span class="hljs-string">"stop"</span>]);
 
+          done();
         });
-      }<span class="hljs-keyword">else</span>{
-        grunt.log.error(<span class="hljs-string">"No urls found to run any tests."</span>);
       }
 
     });</pre></div>
