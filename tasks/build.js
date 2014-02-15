@@ -50,10 +50,8 @@ module.exports = function(grunt) {
         base_url = base_url.substring(0, base_url.length-1)
       }
 
-      grunt.log.ok("Building tests url");
-
       // collect urls to fetch for testing
-      var urls = [];
+      var urls = {};
       if( options.urls && options.urls.length > 0 ){
         urls = collect_urls_from_options(options);
       }else if ( grunt_config.routing ){
@@ -77,9 +75,18 @@ module.exports = function(grunt) {
         }
       }
 
+      grunt.log.ok("Found "+q_options.all.options.urls.length+" url to tests");
+
 
       // if any suitable test url id found
-      if( q_options.all.options.urls.length > 0 ){
+      if( q_options.all.options.urls.length == 0 ){
+
+        grunt.log.error("No urls found to run any tests.");
+
+      }else{
+
+        var done = this.async();
+
         // set quint task options
         grunt.config.set("qunit", q_options);
 
@@ -132,9 +139,8 @@ module.exports = function(grunt) {
           // execute qunit, then stop webserver
           grunt.task.run(["qunit","stop"]);
 
+          done();
         });
-      }else{
-        grunt.log.error("No urls found to run any tests.");
       }
 
     });
